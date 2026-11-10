@@ -4,24 +4,44 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Adiba Saadullah</title>
-  <meta name="description" content="Adiba Saadullah, Informatics student at the University of Washington. UX design, product, and work that helps people.">
+  <meta name="description" content="Adiba Saadullah, Informatics student at the University of Washington. UX design, product, and research for families and communities.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..600,0..100;1,9..144,300..600,0..100&family=Pinyon+Script&display=swap">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="home.css">
 </head>
 <body>
+  <a class="skip" href="#work">Skip to work</a>
+
   <!-- ============ NAV ============ -->
-  <header class="nav">
+  <header class="nav" id="nav">
     <div class="wrap nav-inner">
-      <a class="monogram" href="#top" aria-label="Adiba Saadullah, home"><span>A</span><span>S</span></a>
+      <a class="brand" href="index.html" aria-label="Adiba Saadullah, home">Adiba Saadullah</a>
       <nav aria-label="Main">
         <ul class="nav-links">
-          <li><a href="#work">Work</a></li>
-          <li><a href="#about">About</a></li>
-          <li class="hide-sm"><a href="#beyond">Beyond Work</a></li>
+          <li class="has-menu">
+            <button class="menu-btn" aria-expanded="false" aria-controls="work-menu">Work
+              <svg viewBox="0 0 12 12" aria-hidden="true"><path d="M3 4.5l3 3 3-3" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="menu" id="work-menu">
+              <a href="kidvisor/index.html"><i style="--c:#2BA8E0"></i><span><b>KidVisor</b><small>UX research and design</small></span></a>
+              <a href="maps/index.html"><i style="--c:#B8321F"></i><span><b>MAPS Community Services</b><small>Data and operations</small></span></a>
+              <a href="#work" class="soon"><i style="--c:#4B2E83"></i><span><b>GSU Course Registration</b><small>Product management · soon</small></span></a>
+              <a href="#work" class="soon"><i style="--c:#E7A3B1"></i><span><b>Reham's Cake Gallery</b><small>Web development · soon</small></span></a>
+            </div>
+          </li>
+          <li class="hide-md"><a href="#research">Research</a></li>
+          <li class="hide-md"><a href="#play">Playground</a></li>
+          <li class="hide-md"><a href="#about">About</a></li>
           <li class="hide-sm"><a href="resume.pdf">Resume</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li class="hide-sm"><a href="https://www.linkedin.com/" aria-label="LinkedIn">LinkedIn</a></li>
+          <li><a class="btn btn-small" href="#contact">Say hi</a></li>
+          <li>
+            <button class="theme" id="theme" aria-label="Switch to dark mode">
+              <svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 2.5v2.2M12 19.3v2.2M4.6 4.6l1.6 1.6M17.8 17.8l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.6 19.4l1.6-1.6M17.8 6.2l1.6-1.6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+              <svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+            </button>
+          </li>
         </ul>
       </nav>
     </div>
@@ -33,235 +53,374 @@
     <section class="hero">
       <div class="wrap hero-grid">
         <div class="hero-text">
-          <span class="eyebrow">Informatics at the University of Washington</span>
-          <h1>Hi, I'm Adiba. I design things that <em>help</em> people.</h1>
-          <p class="hero-lede">I'm drawn to work that serves families and communities. I bring research, organization, and a lot of heart to every project, especially when I believe in the mission.</p>
+          <p class="kicker"><span class="dot"></span>Open to summer 2027 UX and product internships</p>
+          <h1>Hi, I'm Adiba.<br><span class="soft">I design things that <em>help</em> people.</span></h1>
+          <p class="lede">Informatics student at the University of Washington. I turn messy, human problems into calm, clear tools for families and communities.</p>
           <div class="hero-actions">
-            <a class="btn btn-primary" href="#work">View my work</a>
-            <a class="btn btn-secondary" href="resume.pdf">Resume</a>
+            <a class="btn" href="#work">See my work</a>
+            <a class="btn btn-ghost" href="resume.pdf">Resume</a>
           </div>
-          <span class="hero-status">Looking for summer 2027 UX and product internships</span>
         </div>
 
-        <!-- Swap the placeholder for your photo:
-             <div class="arch"><img src="images/adiba.jpg" alt="Adiba smiling by a window"></div> -->
-        <div class="arch" role="img" aria-label="Portrait placeholder">
-          <div class="arch-placeholder">
-            <svg viewBox="0 0 120 170" aria-hidden="true">
-              <path d="M60 92 C60 120 58 140 60 166" fill="none" stroke="#6F7E62" stroke-width="2" stroke-linecap="round"/>
-              <path d="M59 140 C44 128 34 110 36 92 C48 104 56 118 59 140 Z" fill="none" stroke="#6F7E62" stroke-width="1.6" stroke-linejoin="round"/>
-              <path d="M40 46 C38 76 46 92 60 94 C74 92 82 76 80 46 L70 58 L60 38 L50 58 Z" fill="#FDFCFB" stroke="#A9844F" stroke-width="1.6" stroke-linejoin="round"/>
-            </svg>
-            <p>Your photo goes here</p>
+        <!-- Flip-through stack. Swap each .face background for a photo:
+             <div class="face"><img src="images/me-designer.jpg" alt="..."></div> -->
+        <div class="stack-wrap">
+          <div class="photo-stack" id="stack" role="button" tabindex="0" aria-label="Flip to the next card">
+            <figure class="pcard" style="--bg:#7B1F33;--fg:#FBEFEF">
+              <div class="face"><span class="ph">Your photo</span></div>
+              <figcaption><b>Designer</b><span>Figma, research, and a lot of sticky notes</span></figcaption>
+            </figure>
+            <figure class="pcard" style="--bg:#2BA8E0;--fg:#F2FAFF">
+              <div class="face"><span class="ph">Your photo</span></div>
+              <figcaption><b>Researcher</b><span>Studying how families learn with AI</span></figcaption>
+            </figure>
+            <figure class="pcard" style="--bg:#C9A27A;--fg:#2A1A10">
+              <div class="face"><span class="ph">Your photo</span></div>
+              <figcaption><b>Teacher</b><span>Weekend classes at Rahma Academy</span></figcaption>
+            </figure>
+            <figure class="pcard" style="--bg:#4B2E83;--fg:#F3EEFF">
+              <div class="face"><span class="ph">Your photo</span></div>
+              <figcaption><b>Community builder</b><span>Grew a student org by 100+ members</span></figcaption>
+            </figure>
+            <figure class="pcard" style="--bg:#E7A3B1;--fg:#3A1520">
+              <div class="face"><span class="ph">Your photo</span></div>
+              <figcaption><b>Photographer</b><span>Rainy days, soft light, small moments</span></figcaption>
+            </figure>
           </div>
+          <p class="stack-hint"><span id="stack-count">1 / 5</span> · Click to flip</p>
+        </div>
+      </div>
+
+      <div class="ticker" aria-hidden="true">
+        <div class="ticker-track">
+          <span>UX research</span><span>Interaction design</span><span>Usability testing</span><span>Product thinking</span><span>Systems and data</span><span>Community first</span>
+          <span>UX research</span><span>Interaction design</span><span>Usability testing</span><span>Product thinking</span><span>Systems and data</span><span>Community first</span>
         </div>
       </div>
     </section>
 
     <!-- ============ SELECTED WORK ============ -->
-    <section class="section" id="work">
+    <section class="work" id="work">
       <div class="wrap">
-        <div class="section-head">
-          <div>
-            <span class="eyebrow">Selected work</span>
-            <h2>Projects I've poured myself into</h2>
-          </div>
-          <div class="shelf-controls">
-            <span class="counter" aria-live="polite">1 / 4</span>
-            <button class="arrow" id="prev" aria-label="Previous project">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg>
-            </button>
-            <button class="arrow" id="next" aria-label="Next project">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"/></svg>
-            </button>
-          </div>
+        <div class="sec-head">
+          <span class="label">Selected work</span>
+          <h2>Projects I've poured <em>myself</em> into</h2>
         </div>
 
-        <div class="shelf">
-          <!-- Card 1: KidVisor -->
-          <a class="card" href="kidvisor/index.html">
-            <div class="card-visual">
-              <div class="phone" aria-hidden="true">
-                <div class="score">Health score <b>72</b></div>
-                <div class="bar"><i></i></div>
-                <div class="row alert"></div>
-                <div class="row"></div>
-                <div class="row"></div>
-              </div>
-            </div>
-            <div class="card-body">
-              <span class="eyebrow">UX research and design · 2026</span>
+        <div class="deck">
+          <!-- KidVisor -->
+          <article class="pcase" style="--c:#1E93CB;--c2:#6BD0F8;--ink:#fff;--sub:rgba(255,255,255,.82)">
+            <a class="pcase-link" href="kidvisor/index.html" aria-label="Read the KidVisor case study"></a>
+            <div class="pcase-text">
+              <span class="pnum">01 · UX research and design · 2026</span>
               <h3>KidVisor</h3>
-              <p>Helping parents understand and guide their kids' exposure to AI-generated content.</p>
-              <div class="tags"><span class="tag">UX research</span><span class="tag">Usability testing</span><span class="tag">Figma</span></div>
-              <span class="link">Read case study →</span>
+              <p>A parent app that helps families understand and talk about the AI content their kids see online.</p>
+              <ul class="ptags"><li>4 interviews</li><li>2 test rounds</li><li>10 hi-fi screens</li></ul>
+              <span class="pcta">Read case study <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
             </div>
-          </a>
+            <div class="pcase-visual phones" aria-hidden="true">
+              <img src="kidvisor/images/screen-alerts.webp" alt="" loading="lazy">
+              <img src="kidvisor/images/screen-dashboard.webp" alt="" loading="lazy">
+              <img src="kidvisor/images/screen-colearn.webp" alt="" loading="lazy">
+            </div>
+          </article>
 
-          <!-- Card 2: MAPS Community Services -->
-          <a class="card" href="#work">
-            <div class="card-visual">
-              <div class="stat-visual">
-                <b>8,471</b>
-                <span>people brought into one client system</span>
-              </div>
-            </div>
-            <div class="card-body">
-              <span class="eyebrow">Data and operations · 2026</span>
+          <!-- MAPS -->
+          <article class="pcase" style="--c:#A82C1B;--c2:#D9573B;--ink:#fff;--sub:rgba(255,255,255,.82)">
+            <a class="pcase-link" href="maps/index.html" aria-label="Read the MAPS Community Services case study"></a>
+            <div class="pcase-text">
+              <span class="pnum">02 · Data and operations internship · 2026</span>
               <h3>MAPS Community Services</h3>
-              <p>Turning years of scattered client records into one system a nonprofit team can trust.</p>
-              <div class="tags"><span class="tag">Data cleaning</span><span class="tag">Systems</span><span class="tag">Nonprofit</span></div>
-              <span class="link">Read case study →</span>
+              <p>Bringing years of scattered client records for a nonprofit into one system its team can trust.</p>
+              <ul class="ptags"><li>8,471 people</li><li>13,000+ cases</li><li>1 system</li></ul>
+              <span class="pcta">Read case study <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
             </div>
-          </a>
+            <div class="pcase-visual maps-vis" aria-hidden="true">
+              <div class="flow-card"><img src="maps/images/omni-flowchart.webp" alt="" loading="lazy"></div>
+              <div class="stat-pill s1"><b>8,471</b><span>unique people</span></div>
+              <div class="stat-pill s2"><b>1,057</b><span>in 2+ programs</span></div>
+            </div>
+          </article>
 
-          <!-- Card 3: GSU registration -->
-          <a class="card" href="#work">
-            <div class="card-visual">
-              <div class="board" aria-hidden="true">
-                <div><small>To do</small><span></span><span></span><span></span></div>
-                <div><small>Doing</small><span class="on"></span><span></span></div>
-                <div><small>Done</small><span class="on"></span><span class="on"></span><span class="on"></span></div>
-              </div>
-            </div>
-            <div class="card-body">
-              <span class="eyebrow">Product management · 2026</span>
+          <!-- GSU -->
+          <article class="pcase" style="--c:#3B2470;--c2:#6B4BB8;--ink:#fff;--sub:rgba(255,255,255,.8)">
+            <div class="pcase-text">
+              <span class="pnum">03 · Product management · 2026</span>
               <h3>GSU Course Registration</h3>
-              <p>Rethinking course registration for students, advisors, and staff, from vision to backlog.</p>
-              <div class="tags"><span class="tag">Product strategy</span><span class="tag">Jira</span><span class="tag">Prototyping</span></div>
-              <span class="link">Read case study →</span>
+              <p>Rethinking course registration for students, advisors and staff, from product vision to backlog.</p>
+              <ul class="ptags"><li>Product vision</li><li>User stories</li><li>Jira</li></ul>
+              <span class="pcta soon">Case study coming soon</span>
             </div>
-          </a>
-
-          <!-- Card 4: Reham's Cake Gallery -->
-          <a class="card" href="#work">
-            <div class="card-visual">
-              <div class="ticket" aria-hidden="true">
-                <strong>Pickup order</strong>
-                <div class="line"><span>Pistachio cake</span><span>×1</span></div>
-                <div class="line"><span>Basbousa tray</span><span>×2</span></div>
-                <span class="pill">Ready Saturday</span>
+            <div class="pcase-visual" aria-hidden="true">
+              <div class="kanban">
+                <div class="col"><small>Backlog</small><span></span><span></span><span class="w60"></span><span></span></div>
+                <div class="col"><small>In progress</small><span class="hot"></span><span></span></div>
+                <div class="col"><small>Done</small><span class="ok"></span><span class="ok w60"></span><span class="ok"></span></div>
               </div>
             </div>
-            <div class="card-body">
-              <span class="eyebrow">Web development · In progress</span>
+          </article>
+
+          <!-- Reham's -->
+          <article class="pcase light" style="--c:#F3C9D1;--c2:#FBE6EA;--ink:#3A1520;--sub:rgba(58,21,32,.75)">
+            <div class="pcase-text">
+              <span class="pnum">04 · Web development · In progress</span>
               <h3>Reham's Cake Gallery</h3>
               <p>An ordering and pickup site for a local dessert business that didn't have a website yet.</p>
-              <div class="tags"><span class="tag">HTML and CSS</span><span class="tag">React</span><span class="tag">Client project</span></div>
-              <span class="link">Read case study →</span>
+              <ul class="ptags"><li>Real client</li><li>React</li><li>HTML and CSS</li></ul>
+              <span class="pcta soon">Case study coming soon</span>
             </div>
-          </a>
+            <div class="pcase-visual" aria-hidden="true">
+              <div class="order">
+                <div class="order-top"><strong>Your order</strong><span>Pickup · Saturday</span></div>
+                <div class="order-line"><span class="sw" style="--s:#C9DDA0"></span><span>Pistachio cake</span><b>×1</b></div>
+                <div class="order-line"><span class="sw" style="--s:#E9C27E"></span><span>Basbousa tray</span><b>×2</b></div>
+                <div class="order-line"><span class="sw" style="--s:#F0B5C2"></span><span>Rose cupcakes</span><b>×6</b></div>
+                <div class="order-btn">Place order</div>
+              </div>
+            </div>
+          </article>
         </div>
       </div>
     </section>
 
-    <!-- ============ VALUES ============ -->
-    <section class="section values">
-      <div class="wrap values-grid">
-        <blockquote>I believe good design is a quiet form of service.</blockquote>
-        <div class="principles">
+    <!-- ============ RESEARCH ============ -->
+    <section class="research" id="research">
+      <div class="wrap">
+        <div class="sec-head row">
           <div>
-            <h3>Listen first</h3>
-            <p>I start with the people who will actually use the thing, and I keep asking until I understand what they need.</p>
+            <span class="label">Research</span>
+            <h2>Questions I'm <em>chasing</em></h2>
           </div>
-          <div>
-            <h3>Make it calm and clear</h3>
-            <p>I like turning messy situations into simple, organized systems that feel good to use.</p>
-          </div>
-          <div>
-            <h3>Leave it better</h3>
-            <p>I want my work to make a real difference for communities, not just look nice in a deck.</p>
+          <div class="scroller-btns">
+            <button class="arrow" data-dir="-1" aria-label="Scroll research left"><svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+            <button class="arrow" data-dir="1" aria-label="Scroll research right"><svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
           </div>
         </div>
+      </div>
+      <div class="rail" id="rail">
+        <article class="rcard" style="--r:#7B1F33">
+          <span class="rtag">Systematic review · In progress</span>
+          <h3>How do researchers study parents, children and AI learning together?</h3>
+          <p>With a UW research team, I'm reviewing five years of studies on parent, child and AI interaction in education, and how each study frames the parent's role.</p>
+          <span class="rmeta">With Dr. Johnny Cho's team · 2026</span>
+        </article>
+        <article class="rcard" style="--r:#1E93CB">
+          <span class="rtag">UX research</span>
+          <h3>What do parents actually worry about when it comes to AI content?</h3>
+          <p>Four parent interviews and a survey showed that parents can't always tell what's AI-made, and want to understand, not just block.</p>
+          <span class="rmeta">KidVisor · INFO 360 · 2026</span>
+        </article>
+        <article class="rcard" style="--r:#4F6B3A">
+          <span class="rtag">Data analysis in R</span>
+          <h3>Who does the world trust to regulate AI?</h3>
+          <p>Using Pew's 2025 Global Attitudes survey, I compared trust in the US, China, the EU and people's own countries, and how age relates to feelings about AI.</p>
+          <span class="rmeta">SOC 225 · 23 countries · 2026</span>
+        </article>
+        <article class="rcard ghost">
+          <span class="rtag">Next</span>
+          <h3>More soon.</h3>
+          <p>Writing and findings will live here as the review moves toward publication.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ PLAYGROUND ============ -->
+    <section class="play" id="play">
+      <div class="wrap play-grid">
+        <div class="play-intro">
+          <span class="label">Playground</span>
+          <h2>The other ways <em>I create</em></h2>
+          <p>Posters, teaching, photos and words. The parts of me that don't fit neatly on a resume, but shape how I work.</p>
+          <div class="preview" id="preview" aria-hidden="true">
+            <div class="pv" data-k="posters" style="--p:#7B1F33"><b>Campaign posters</b><span>Add your SFJ posters here</span></div>
+            <div class="pv" data-k="msa" style="--p:#2F5D50"><b>Social posts</b><span>Add your MSA posts here</span></div>
+            <div class="pv" data-k="visual" style="--p:#C9A27A"><b>Visual design</b><span>Add your INFO 362 work here</span></div>
+            <div class="pv" data-k="teach" style="--p:#4B2E83"><b>Lesson design</b><span>Add a lesson slide here</span></div>
+            <div class="pv" data-k="photo" style="--p:#5B6B7A"><b>Photography</b><span>Add your photos here</span></div>
+          </div>
+        </div>
+        <ul class="play-list">
+          <li data-k="posters"><span class="pl-n">01</span><span class="pl-t">Campaign posters</span><span class="pl-m">Students for Justice · Canva</span></li>
+          <li data-k="msa"><span class="pl-n">02</span><span class="pl-t">Social posts</span><span class="pl-m">MSA PR and Volunteer Corps</span></li>
+          <li data-k="visual"><span class="pl-n">03</span><span class="pl-t">Visual design studio</span><span class="pl-m">INFO 362 · Illustrator, InDesign</span></li>
+          <li data-k="teach"><span class="pl-n">04</span><span class="pl-t">Lesson design</span><span class="pl-m">Rahma Academy and summer camp</span></li>
+          <li data-k="photo"><span class="pl-n">05</span><span class="pl-t">Photography</span><span class="pl-m">Soft light, small moments</span></li>
+        </ul>
       </div>
     </section>
 
     <!-- ============ ABOUT ============ -->
-    <section class="section" id="about">
-      <div class="wrap about-grid">
-        <div class="about-story">
-          <span class="eyebrow">About me</span>
-          <h2>A little about me</h2>
-          <p>I moved to the United States as a child and changed homes and schools more times than I can count. It taught me to adapt quickly, and to notice the people who are still finding their footing.</p>
-          <p>Today I study Informatics at the University of Washington, teach at a weekend school, and spend my free time on community work. I love rainy days, fall, a good book, and making messy things simple and beautiful.</p>
-          <a class="link" href="#about">Read my full story →</a>
-        </div>
-        <aside class="facts">
-          <dl>
-            <div><dt>Studying</dt><dd>B.S. Informatics, University of Washington, 2028</dd></div>
-            <div><dt>Interested in</dt><dd>UX design, product management, and work with social impact</dd></div>
-            <div><dt>Tools</dt><dd>Figma, Canva, Jira, Excel, R, HTML and CSS</dd></div>
-            <div><dt>Languages</dt><dd>English, Bengali, and Hindi</dd></div>
-          </dl>
-        </aside>
-      </div>
-    </section>
-
-    <!-- ============ BEYOND WORK ============ -->
-    <section class="section beyond" id="beyond">
+    <section class="about" id="about">
       <div class="wrap">
-        <div class="section-head">
-          <div>
-            <span class="eyebrow">Beyond work</span>
-            <h2>The other ways I create</h2>
-            <p class="section-sub">The parts of me that don't fit neatly on a resume, but shape how I work.</p>
+        <div class="about-grid">
+          <div class="about-text">
+            <span class="label">About me</span>
+            <h2>A little about <em>me</em></h2>
+            <p>I moved to the United States as a child and changed homes and schools more times than I can count. It taught me to adapt quickly, and to notice the people who are still finding their footing.</p>
+            <p>Today I study Informatics at the University of Washington, teach on weekends, and spend my free time on community work. I love rainy days, fall, a good book, and making messy things simple and beautiful.</p>
           </div>
-        </div>
-        <div class="beyond-grid">
-          <article class="tile feature">
-            <span class="num">Design</span>
-            <h3>Posters and social posts</h3>
-            <p>Campaigns for Students for Justice at Bellevue College, posts for my MSA, and personal Canva projects.</p>
-          </article>
-          <article class="tile">
-            <span class="num">Teaching</span>
-            <h3>Rahma Academy and camps</h3>
-            <p>Teaching Qur'an recitation and Arabic literacy, designing lessons, and tutoring my brother.</p>
-          </article>
-          <article class="tile">
-            <span class="num">Community</span>
-            <h3>Showing up</h3>
-            <p>Volunteering and staying close to the communities I hope to serve.</p>
-          </article>
-          <article class="tile">
-            <span class="num">Writing</span>
-            <h3>Stories and reflections</h3>
-            <p>Short stories and quiet thoughts I've written since school.</p>
-          </article>
-          <article class="tile">
-            <span class="num">Photography</span>
-            <h3>Soft light, small moments</h3>
-            <p>A few frames of the everyday things I notice.</p>
-          </article>
-        </div>
-      </div>
-    </section>
 
-    <!-- ============ CONTACT ============ -->
-    <section class="contact" id="contact">
-      <div class="wrap">
-        <div class="contact-inner">
-          <span class="eyebrow">Contact</span>
-          <h2>Let's talk.</h2>
-          <p>I'm looking for summer 2027 internships in UX design and product management. I'd love to hear from you.</p>
-          <div class="email-row">
-            <span id="email">your.email@example.com</span>
-            <button class="copy-btn" type="button">Copy</button>
+          <div class="exp">
+            <h3>Experience</h3>
+            <ol>
+              <li><span class="when">2026</span><span class="what"><b>Data and Operations Intern</b>MAPS Community Services</span></li>
+              <li><span class="when">Now</span><span class="what"><b>Research Assistant</b>Systematic review team, UW</span></li>
+              <li><span class="when">Now</span><span class="what"><b>Teacher</b>Rahma Academy, MAPS</span></li>
+              <li><span class="when">Now</span><span class="what"><b>PR and Volunteer Corps</b>Muslim Students Association, UW</span></li>
+              <li><span class="when">Before UW</span><span class="what"><b>Marketing Manager, Interim President</b>Students for Justice, Bellevue College</span></li>
+            </ol>
+            <h3>Education</h3>
+            <ol>
+              <li><span class="when">2028</span><span class="what"><b>B.S. Informatics</b>University of Washington</span></li>
+              <li><span class="when">Before UW</span><span class="what"><b>Associate degree, Informatics</b>Bellevue College</span></li>
+            </ol>
           </div>
-          <div class="contact-links">
-            <a class="link" href="https://www.linkedin.com/">LinkedIn ↗</a>
-            <a class="link" href="resume.pdf">Resume ↗</a>
-          </div>
-          <p class="signature">Adiba</p>
         </div>
-        <div class="footer-bottom">
-          <span>© <span id="year">2026</span> Adiba Saadullah</span>
-          <span>Designed and built by me</span>
+
+        <div class="skills">
+          <h3>Tools I use</h3>
+          <ul class="tool-grid">
+            <li><i>Fi</i>Figma</li><li><i>Fj</i>FigJam</li><li><i>Ca</i>Canva</li><li><i>Ai</i>Illustrator</li>
+            <li><i>Ps</i>Photoshop</li><li><i>Id</i>InDesign</li><li><i>Mi</i>Miro</li><li><i>Ji</i>Jira</li>
+            <li><i>No</i>Notion</li><li><i>&lt;/&gt;</i>HTML and CSS</li><li><i>JS</i>JavaScript</li><li><i>Jv</i>Java</li>
+            <li><i>R</i>R</li><li><i>SQ</i>SQL</li><li><i>Xl</i>Excel</li><li><i>VS</i>VS Code</li>
+          </ul>
+          <p class="methods"><b>Methods</b> User interviews, surveys, usability testing, heuristic evaluation, personas, journey maps, storyboards, prototyping, user stories, backlog management, stakeholder analysis</p>
         </div>
       </div>
     </section>
   </main>
 
-  <script src="script.js"></script>
+  <!-- ============ CONTACT (revealed footer) ============ -->
+  <footer class="contact" id="contact">
+    <div class="wrap contact-inner">
+      <span class="label">Contact</span>
+      <h2>Let's make something <em>good</em> together.</h2>
+      <div class="email-row">
+        <span id="email">your.email@example.com</span>
+        <button class="copy" type="button" id="copy">Copy email</button>
+      </div>
+      <div class="contact-links">
+        <a href="https://www.linkedin.com/">LinkedIn ↗</a>
+        <a href="resume.pdf">Resume ↗</a>
+        <a href="#top">Back to top ↑</a>
+      </div>
+      <div class="foot">
+        <span>© <span id="year">2026</span> Adiba Saadullah</span>
+        <span>Designed and built on rainy Seattle days</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+  (function () {
+    var root = document.documentElement;
+
+    // Theme toggle (remembers choice when storage is available)
+    var themeBtn = document.getElementById('theme');
+    function setTheme(t) {
+      root.setAttribute('data-theme', t);
+      themeBtn.setAttribute('aria-label', t === 'dark' ? 'Switch to light mode' : 'Switch to dark mode');
+    }
+    var saved = null;
+    try { saved = localStorage.getItem('as-theme'); } catch (e) {}
+    setTheme(saved || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'));
+    themeBtn.addEventListener('click', function () {
+      var t = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      setTheme(t);
+      try { localStorage.setItem('as-theme', t); } catch (e) {}
+    });
+
+    // Nav shadow on scroll
+    var nav = document.getElementById('nav');
+    addEventListener('scroll', function () { nav.classList.toggle('scrolled', scrollY > 8); }, { passive: true });
+
+    // Work dropdown
+    var mb = document.querySelector('.menu-btn'), menu = document.getElementById('work-menu');
+    mb.addEventListener('click', function (e) {
+      e.stopPropagation();
+      var open = mb.getAttribute('aria-expanded') === 'true';
+      mb.setAttribute('aria-expanded', String(!open));
+    });
+    document.addEventListener('click', function () { mb.setAttribute('aria-expanded', 'false'); });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') mb.setAttribute('aria-expanded', 'false'); });
+
+    // Photo stack: click to send the top card to the back
+    var stack = document.getElementById('stack'), count = document.getElementById('stack-count');
+    var cards = Array.prototype.slice.call(stack.children), idx = 0, busy = false;
+    function layout() {
+      cards.forEach(function (c, i) {
+        var pos = (i - idx + cards.length) % cards.length;
+        c.style.setProperty('--pos', pos);
+        c.style.zIndex = cards.length - pos;
+      });
+      count.textContent = (idx + 1) + ' / ' + cards.length;
+    }
+    function flip() {
+      if (busy) return; busy = true;
+      var top = cards[idx];
+      top.classList.add('out');
+      setTimeout(function () {
+        idx = (idx + 1) % cards.length;
+        layout();
+        top.classList.remove('out');
+        busy = false;
+      }, 380);
+    }
+    stack.addEventListener('click', flip);
+    stack.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); flip(); } });
+    layout();
+
+    // Stacking work cards: shrink the card underneath as the next one slides over
+    var decks = Array.prototype.slice.call(document.querySelectorAll('.pcase'));
+    function deckScroll() {
+      decks.forEach(function (c, i) {
+        var next = decks[i + 1];
+        if (!next) return;
+        var r = next.getBoundingClientRect(), h = innerHeight;
+        var p = Math.min(Math.max((h - r.top) / (h * 0.85), 0), 1);
+        c.style.setProperty('--p', p.toFixed(3));
+      });
+    }
+    addEventListener('scroll', deckScroll, { passive: true });
+    addEventListener('resize', deckScroll);
+    deckScroll();
+
+    // Research rail arrows
+    var rail = document.getElementById('rail');
+    document.querySelectorAll('.scroller-btns .arrow').forEach(function (b) {
+      b.addEventListener('click', function () { rail.scrollBy({ left: +b.dataset.dir * rail.clientWidth * 0.6, behavior: 'smooth' }); });
+    });
+
+    // Playground hover preview
+    var pvs = document.querySelectorAll('.pv');
+    function show(k) { pvs.forEach(function (p) { p.classList.toggle('on', p.dataset.k === k); }); }
+    document.querySelectorAll('.play-list li').forEach(function (li) {
+      li.tabIndex = 0;
+      li.addEventListener('mouseenter', function () { show(li.dataset.k); });
+      li.addEventListener('focus', function () { show(li.dataset.k); });
+    });
+    show('posters');
+
+    // Copy email
+    var copyBtn = document.getElementById('copy');
+    copyBtn.addEventListener('click', function () {
+      var text = document.getElementById('email').textContent;
+      var done = function () { copyBtn.textContent = 'Copied'; setTimeout(function () { copyBtn.textContent = 'Copy email'; }, 1600); };
+      if (navigator.clipboard) navigator.clipboard.writeText(text).then(done, done); else done();
+    });
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Reveal on scroll
+    if ('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      var els = document.querySelectorAll('.sec-head, .rcard, .play-list li, .about-text, .exp, .skills');
+      els.forEach(function (el) { el.classList.add('reveal'); });
+      var io = new IntersectionObserver(function (es) {
+        es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+      }, { rootMargin: '0px 0px -8% 0px' });
+      els.forEach(function (el) { io.observe(el); });
+    }
+  })();
+  </script>
 </body>
 </html>
