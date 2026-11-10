@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>KidVisor</title>
+  <meta name="claude:viewport-fit-sides" content="cover">
+  <meta name="description" content="KidVisor: a UX case study by Adiba Saadullah on helping parents guide their children through AI-generated content.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,600;0,700;0,800;0,900;1,700&family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,700&display=swap">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header class="nav">
+    <div class="wrap nav-inner">
+      <a href="#top" class="logo-link" aria-label="KidVisor, back to top"><span class="logo">Kidv<svg class="logo-i" viewBox="0 0 22 40" aria-hidden="true"><circle cx="11" cy="6" r="4.6" fill="currentColor"/><path d="M3 15.5 L11 19 L19 15.5 M11 19 V29 M11 29 L6.5 38 M11 29 L15.5 38" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/></svg>sor</span></a>
+      <a class="portfolio-link" href="../index.html#work">← Adiba's portfolio</a>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ============ HERO ============ -->
+    <section class="kv-hero" id="top">
+      <div class="wrap kv-hero-grid">
+        <div class="kv-hero-text">
+          <span class="byline">A UX case study by Adiba Saadullah</span>
+          <h1>Supporting parents in the age of <span>intelligent media.</span></h1>
+          <p class="kv-sub">KidVisor helps parents understand, monitor and talk about the AI-generated content their kids see online, so they can guide them with confidence instead of guessing.</p>
+          <div class="kv-actions">
+            <a class="btn btn-white" href="https://www.figma.com/proto/gJAdakdcy52HbfabrVJKoQ/Kidvisor---AI-Learning-App_INFO-380-Team-22?node-id=2-2&amp;p=f&amp;t=HT3lmZEZk5pfbrjX-1&amp;scaling=scale-down&amp;content-scaling=fixed&amp;page-id=0%3A1&amp;starting-point-node-id=2%3A2" target="_blank" rel="noopener">Try the prototype ↗</a>
+            <a class="btn btn-ghost" href="https://www.youtube.com/watch?v=j3AyYcY7vuY" target="_blank" rel="noopener">Watch the video ↗</a>
+          </div>
+        </div>
+        <div class="kv-stage" aria-label="Three KidVisor app screens: alerts, home dashboard, and co-learn" role="img">
+          <img class="p1" src="images/screen-alerts.webp" alt="">
+          <img class="p2" src="images/screen-dashboard.webp" alt="">
+          <img class="p3" src="images/screen-colearn.webp" alt="">
+        </div>
+      </div>
+      <svg class="hero-wave" viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true"><path d="M0 40 C 360 90 1080 -10 1440 40 L1440 80 L0 80 Z" fill="currentColor"/></svg>
+    </section>
+
+    <section class="facts-band">
+      <div class="wrap">
+        <dl class="facts-row">
+          <div><dt>My role</dt><dd>Project manager, UX researcher, and high-fidelity prototype designer</dd></div>
+          <div><dt>Team</dt><dd>Adiba Saadullah, Khadija Saho, Ruth Karen Nakigozi, Sruti Banerjee</dd></div>
+          <div><dt>Timeline</dt><dd>10 weeks, Spring 2026<br><span class="muted">INFO 360 Design Methods, University of Washington</span></dd></div>
+          <div><dt>Tools</dt><dd>Figma, FigJam, Google Forms, Canva</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- ============ CHAPTER NAV ============ -->
+    <nav class="chapters" aria-label="Case study sections">
+      <div class="wrap">
+        <ol>
+          <li><a href="#overview"><small>00</small>Overview</a></li>
+          <li><a href="#problem"><small>01</small>Problem</a></li>
+          <li><a href="#research"><small>02</small>Research</a></li>
+          <li><a href="#define"><small>03</small>Define and ideate</a></li>
+          <li><a href="#testing"><small>04</small>Testing</a></li>
+          <li><a href="#solution"><small>05</small>Solution</a></li>
+          <li><a href="#reflection"><small>06</small>Reflection</a></li>
+        </ol>
+      </div>
+    </nav>
+
+    <!-- ============ 00 OVERVIEW ============ -->
+    <section class="cs-section tint" id="overview">
+      <div class="wrap">
+        <div class="cs-head">
+          <span class="chapter-num">At a glance</span>
+          <h2>The whole project in one minute</h2>
+        </div>
+        <div class="glance">
+          <article class="panel">
+            <span class="chapter-num">The problem</span>
+            <h3>Kids see AI content every day</h3>
+            <p>Children ages 3 to 12 meet AI-generated videos, images and recommendations on YouTube, Roblox and search. Many parents can't reliably spot it, or explain it.</p>
+          </article>
+          <article class="panel">
+            <span class="chapter-num">What we made</span>
+            <h3>A guide, not just a filter</h3>
+            <p>A parent app that flags misleading or AI-generated content, explains why it was flagged, and helps parents and kids build AI literacy together.</p>
+          </article>
+          <article class="panel mine">
+            <span class="chapter-num">What I did</span>
+            <h3>Led, researched, built</h3>
+            <p>Organized the team as project manager, ran parent interviews and both usability tests, and built the high-fidelity Figma prototype from scratch.</p>
+          </article>
+          <article class="panel">
+            <span class="chapter-num">The result</span>
+            <h3>10 tested screens</h3>
+            <p>An interactive prototype shaped by 4 parent interviews, 6 survey responses, an expert consult and 2 rounds of usability testing.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 01 PROBLEM ============ -->
+    <section class="cs-section" id="problem">
+      <div class="wrap">
+        <div class="cs-head">
+          <span class="chapter-num">01 · Problem</span>
+          <h2>Kids are growing up with AI. Their parents didn't.</h2>
+          <p>Young children are exposed to AI-generated content through YouTube, search engines and games, often without recognizing it as AI. Parents are responsible for guiding their media use, but many don't know how AI shows up in everyday content or how it shapes what their kids learn, believe and pay attention to.</p>
+        </div>
+
+        <div class="block">
+          <h3 class="sub-head">Narrowing it down in five steps</h3>
+          <ol class="funnel">
+            <li style="--w:100%; --mix:8%"><b>Broad problem</b><span>Young children are increasingly exposed to AI-generated content.</span></li>
+            <li style="--w:92%; --mix:13%"><b>Narrower</b><span>This exposure leaves kids ages 3 to 12 open to misinformation, weaker critical thinking, and trouble telling AI from human-made content.</span></li>
+            <li style="--w:84%; --mix:18%"><b>Design problem</b><span>Parents struggle to recognize and understand AI content in their kids' daily media, which makes it hard to guide them.</span></li>
+            <li style="--w:76%; --mix:24%"><b>Gap</b><span>Online safety and screen time tools exist, but very few are AI literate.</span></li>
+            <li style="--w:68%"><b>Our proposal</b><span>An AI-informed parenting tool that helps parents identify, understand and guide their child's exposure to AI content.</span></li>
+          </ol>
+        </div>
+
+        <div class="block">
+          <blockquote class="hmw">
+            <span class="label">Design question</span>
+            How might we <em>help parents</em> <strong>guide their children to critically engage with AI-generated content</strong> so they can develop healthy media habits in their formative years?
+          </blockquote>
+        </div>
+
+        <div class="block callout">
+          <span class="tagline">Adaptive, not technical</span>
+          <p>We realized a tool alone wouldn't fix this. AI keeps changing and so do family dynamics, so parents need to keep learning and actively stay involved. That meant KidVisor had to teach and adapt, not just block content.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 02 RESEARCH ============ -->
+    <section class="cs-section ice" id="research">
+      <div class="wrap">
+        <div class="cs-head">
+          <span class="chapter-num">02 · Research</span>
+          <h2>Listening to parents first</h2>
+          <p>Before sketching anything, we wanted to understand how parents actually think and talk about AI. We combined interviews, a survey, academic research, a competitor review and advice from an expert in children's AI learning.</p>
+        </div>
+
+        <div class="methods">
+          <div class="method"><b>4</b><span>parent interviews</span></div>
+          <div class="method"><b>6</b><span>parent survey responses</span></div>
+          <div class="method"><b>6</b><span>research papers reviewed</span></div>
+          <div class="method"><b>3</b><span>competitors analyzed</span></div>
+          <div class="method"><b>1</b><span>expert consultation</span></div>
+        </div>
+
+        <!-- Interviews -->
+        <div class="block">
+          <h3 class="sub-head">What parents told us</h3>
+          <div class="voices">
+            <article class="panel voice">
+              <div class="who"><span>Parent of a 9-year-old</span><span>Interviewed by Adiba</span></div>
+              <blockquote>"I saw it with my own eyes."</blockquote>
+              <p class="insight"><b>Insight:</b> Her daughter believed a realistic video over her own mom. The parent tells her AI is "900% not real," but can't always tell what's AI herself, which makes these conversations hard.</p>
+              <details class="more">
+                <summary>More from this interview</summary>
+                <ul>
+                  <li>About 4 hours of screen time a day across a PC, phone and TV.</li>
+                  <li>Defines AI narrowly as "fake videos" and isn't aware of recommendation algorithms or chatbots.</li>
+                  <li>Uses offline strategies (books, gymnastics, cooking) more than digital tools.</li>
+                  <li>Wanted alerts, clear "is this safe?" signals and a usage dashboard. Less interested in time-heavy features.</li>
+                </ul>
+              </details>
+            </article>
+            <article class="panel voice">
+              <div class="who"><span>Parent of a 9 and 12-year-old</span><span>Interviewed by Adiba</span></div>
+              <blockquote>Co-viewing made the biggest difference.</blockquote>
+              <p class="insight"><b>Insight:</b> This family had 30 to 40 minutes of screen time, co-viewing and active check-ins, and none of the misinformation problems we heard elsewhere. Watching and talking together made the biggest difference.</p>
+              <details class="more">
+                <summary>More from this interview</summary>
+                <ul>
+                  <li>Reviews YouTube history from her own phone and stays present when the TV is on.</li>
+                  <li>Sees AI as something that can support learning and creativity, and explains both its pros and cons.</li>
+                  <li>This interview inspired our "Together" co-learning features.</li>
+                </ul>
+              </details>
+            </article>
+            <article class="panel voice">
+              <div class="who"><span>Parent of a 6 and 3-year-old</span><span>Team interview</span></div>
+              <blockquote>"He trusts AI more than me sometimes."</blockquote>
+              <p class="insight"><b>Insight:</b> His son trusts self-driving cars because "AI follows the rules." Kids can see AI as a reliable companion instead of something to question. Even for this parent, defining AI simply enough for a child was the hardest part.</p>
+              <details class="more">
+                <summary>More from this interview</summary>
+                <ul>
+                  <li>His son thinks AI means "robot" and can't tell AI, robots and computers apart.</li>
+                  <li>Worried that kids who never knew life before AI won't have anything to compare it to.</li>
+                  <li>Asked for harmful content alerts, simple lessons on talking to kids, and a clear rating system.</li>
+                </ul>
+              </details>
+            </article>
+            <article class="panel voice">
+              <div class="who"><span>Parent of a 7 and 12-year-old</span><span>Interviewed by Ruth</span></div>
+              <blockquote>AI hadn't come up at home yet.</blockquote>
+              <p class="insight"><b>Insight:</b> Even a parent comfortable with tools like ChatGPT hadn't talked to their kids about AI. Comfort with AI doesn't automatically turn into conversations at home.</p>
+              <details class="more">
+                <summary>More from this interview</summary>
+                <ul>
+                  <li>Both kids use YouTube on an iPad and a phone, mostly on their own, with device controls.</li>
+                  <li>Has taken devices away before after the kids saw harmful content.</li>
+                </ul>
+              </details>
+            </article>
+          </div>
+        </div>
+
+        <!-- Survey -->
+        <div class="block">
+          <h3 class="sub-head">What the survey showed</h3>
+          <div class="stats">
+            <div class="stat"><b>4 of 6</b><p>parents were very concerned their child might believe something online that isn't true</p></div>
+            <div class="stat"><b>4 of 6</b><p>were very concerned about algorithms shaping what their child sees</p></div>
+            <div class="stat"><b>1 of 5</b><p>felt very confident recognizing AI-generated images, videos or text</p></div>
+            <div class="stat"><b>3 of 5</b><p>picked alerts for harmful AI content as the single most useful feature</p></div>
+          </div>
+          <p class="note">Survey of 6 parents of kids ages 3 to 8. Some questions were optional, so a few have 5 answers.</p>
+        </div>
+
+        <!-- Empathy map -->
+        <div class="block">
+          <h3 class="sub-head">Empathy map</h3>
+          <div class="tabs" role="tablist" aria-label="Empathy map">
+            <button class="tab" role="tab" id="t-says" aria-controls="p-says" aria-selected="true">Says</button>
+            <button class="tab" role="tab" id="t-thinks" aria-controls="p-thinks" aria-selected="false">Thinks</button>
+            <button class="tab" role="tab" id="t-does" aria-controls="p-does" aria-selected="false">Does</button>
+            <button class="tab" role="tab" id="t-feels" aria-controls="p-feels" aria-selected="false">Feels</button>
+          </div>
+          <div class="panel">
+            <div class="tab-panel empathy" role="tabpanel" id="p-says" aria-labelledby="t-says">
+              <p class="lead">Parents describe AI in practical, experience-based ways, often mixing concern with observation.</p>
+              <ul><li>"They think AI is their companion or friend."</li><li>"It's hard to tell what's real sometimes."</li><li>"YouTube has a lot of weird or not age-appropriate things."</li><li>"Kids don't skip ads, they just keep watching."</li><li>"I want something simple, not overwhelming."</li><li>"It's not about AI, it's about how you use it."</li></ul>
+            </div>
+            <div class="tab-panel empathy" role="tabpanel" id="p-thinks" aria-labelledby="t-thinks" hidden>
+              <p class="lead">They're trying to make sense of something new, with a quiet worry about the long term.</p>
+              <ul><li>Kids don't have anything to compare AI to.</li><li>Even adults don't fully understand AI, so teaching it is hard.</li><li>AI content can be misleading, manipulative or overly polished.</li><li>Exposure without guidance could shape how kids see reality.</li><li>Technology is unavoidable, so the focus should be guidance, not restriction.</li></ul>
+            </div>
+            <div class="tab-panel empathy" role="tabpanel" id="p-does" aria-labelledby="t-does" hidden>
+              <p class="lead">Parents adapt as they go, balancing supervision with what's practical.</p>
+              <ul><li>Set screen time limits, often different on weekends.</li><li>Use parental controls and YouTube Kids.</li><li>Restrict or take away devices when content feels harmful.</li><li>Have occasional "real vs. fake" conversations.</li><li>Look for (or wish for) better tools to filter and track content.</li></ul>
+            </div>
+            <div class="tab-panel empathy" role="tabpanel" id="p-feels" aria-labelledby="t-feels" hidden>
+              <p class="lead">A mix of concern, uncertainty, responsibility and cautious hope.</p>
+              <ul><li>Concerned about kids being misled or manipulated.</li><li>Overwhelmed by how fast technology is changing.</li><li>Unsure how to explain AI clearly.</li><li>Frustrated by imperfect tools and platforms.</li><li>Hopeful AI can be good for kids if it's used the right way.</li></ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Competitors -->
+        <div class="block">
+          <h3 class="sub-head">What existing tools miss</h3>
+          <div class="grid-3">
+            <article class="panel comp">
+              <div><h3>Bark</h3><span class="kind">Monitoring for texts, email and 30+ apps</span></div>
+              <dl>
+                <div><dt class="good">Strength</dt><dd>Wide platform coverage, with alerts for risky content like cyberbullying and self-harm.</dd></div>
+                <div><dt class="gap">Gap</dt><dd>Reactive only. It flags problems after they happen, with no AI literacy or explanation for parents.</dd></div>
+              </dl>
+            </article>
+            <article class="panel comp">
+              <div><h3>Helmit</h3><span class="kind">On-device protection for PCs</span></div>
+              <dl>
+                <div><dt class="good">Strength</dt><dd>Privacy-first, with processing on the device and alerts only when there's real danger.</dd></div>
+                <div><dt class="gap">Gap</dt><dd>Requires a laptop or PC and leaves out YouTube, gaming and mobile, where most kids actually are.</dd></div>
+              </dl>
+            </article>
+            <article class="panel comp">
+              <div><h3>Aura</h3><span class="kind">Filtering, screen time and wellbeing</span></div>
+              <dl>
+                <div><dt class="good">Strength</dt><dd>Wellbeing insights and conversation starters, not just content filters.</dd></div>
+                <div><dt class="gap">Gap</dt><dd>Insights are behavioral, not educational. It doesn't help parents understand AI content or why it matters.</dd></div>
+              </dl>
+            </article>
+          </div>
+          <p class="opportunity"><b>The opportunity:</b> every tool focused on blocking or tracking. None explained AI content to parents or helped them turn a flagged video into a learning moment.</p>
+        </div>
+
+        <!-- Expert -->
+        <div class="block expert">
+          <div>
+            <h3 class="sub-head">Advice from an expert</h3>
+            <p class="muted">We spoke with Dr. Safinah Ali, an assistant professor at NYU (formerly at the MIT Media Lab) who researches how AI can support learning and creativity for children.</p>
+          </div>
+          <div class="panel">
+            <ul>
+              <li><b>Start with parents early</b> and observe how they actually interact with their kids around technology.</li>
+              <li><b>Study the language parents use</b> about AI, and where that understanding comes from.</li>
+              <li><b>Acknowledge the expertise gap.</b> Most parents aren't AI experts, so tools should be structured and interactive.</li>
+              <li><b>Design for local context,</b> since every family's routines and values are different.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Insights to decisions -->
+        <div class="block">
+          <h3 class="sub-head">Three insights that shaped everything</h3>
+          <div class="insights">
+            <div class="insight-row">
+              <span class="n">1</span>
+              <div><h3>Parents think AI just means "fake videos"</h3><p>Most parents had a narrow picture of AI and no reliable way to recognize it, so blocking content alone wouldn't help them guide their kids.</p></div>
+              <div class="so"><b>So we designed</b><p>Alerts that explain why content was flagged, in plain language, with Block, Allow and Monitor choices.</p></div>
+            </div>
+            <div class="insight-row">
+              <span class="n">2</span>
+              <div><h3>Kids trust convincing content, sometimes more than their parents</h3><p>The families doing best weren't the strictest. They watched and talked together.</p></div>
+              <div class="so"><b>So we designed</b><p>Co-Learn, with lessons for parents, for kids and to do together, plus conversation starters.</p></div>
+            </div>
+            <div class="insight-row">
+              <span class="n">3</span>
+              <div><h3>Busy parents want simple, low-effort support</h3><p>Parents asked for something "simple, not overwhelming," and the survey's top pick was alerts, not long courses.</p></div>
+              <div class="so"><b>So we designed</b><p>A glanceable home dashboard with a media health score, color-coded screen time and short personalized lessons.</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 03 DEFINE & IDEATE ============ -->
+    <section class="cs-section" id="define">
+      <div class="wrap">
+        <div class="cs-head">
+          <span class="chapter-num">03 · Define and ideate</span>
+          <h2>From research to a clear idea</h2>
+          <p>We turned what we heard into a persona, a value proposition and a short list of must-have features, then sketched our first version on paper.</p>
+        </div>
+
+        <div class="grid-2">
+          <article class="panel persona">
+            <span class="avatar" aria-hidden="true">A</span>
+            <div>
+              <h3>Meet Ayesha</h3>
+              <p class="meta">Busy working mom of Sara (6) and Adam (8)</p>
+              <p>Her kids spend hours on their tablets. She's never sure if what Sara watches is AI-generated or even age-appropriate, and other parental controls only let her block things or track time. She wants to protect her kids, but also understand what they're seeing and know how to talk to them about it.</p>
+            </div>
+          </article>
+          <article class="panel priority">
+            <div>
+              <h4>Value proposition</h4>
+              <p>KidVisor gives parents real-time visibility into the AI and harmful content their child encounters. Not just to block it, but to turn it into a learning moment.</p>
+            </div>
+            <div>
+              <h4>Must-have features (from our impact vs. feasibility matrix)</h4>
+              <div class="chips">
+                <span class="chip">AI content detection and labels</span>
+                <span class="chip">Real-time alerts</span>
+                <span class="chip">Child safety filters</span>
+                <span class="chip">Media use dashboard</span>
+                <span class="chip">Privacy and transparency</span>
+              </div>
+            </div>
+            <div>
+              <h4>Saved for later</h4>
+              <div class="chips">
+                <span class="chip soft">School integration</span>
+                <span class="chip soft">Achievement badges</span>
+                <span class="chip soft">Detailed analytics</span>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="block lofi-grid">
+          <figure class="figure">
+            <img class="zoomable" src="images/lofi-sketch.webp" alt="Hand-drawn low-fidelity wireframes of the onboarding quiz, dashboard, alert and learn screens, titled AI Aware App" loading="lazy">
+            <figcaption><b>Low-fidelity prototype.</b> Our first paper version, still called "AI Aware App." Click to enlarge.</figcaption>
+          </figure>
+          <div>
+            <h3 class="sub-head">The first user flow</h3>
+            <p>We kept the first version to one simple path: learn about the parent and child, show what's happening, flag what matters, and help the parent act and learn.</p>
+            <div class="flow">
+              <span>Onboarding quiz</span><i>→</i><span>Dashboard</span><i>→</i><span>Alerts and insights</span><i>→</i><span>Block or manage</span><i>→</i><span>Learn AI literacy</span>
+            </div>
+            <figure class="figure" style="margin-top:32px">
+              <img class="zoomable" src="images/storyboard.webp" alt="Six-panel hand-drawn storyboard of a mom discovering and using the app" loading="lazy">
+              <figcaption><b>Storyboard.</b> A parent's journey from worry to confidence. Click to enlarge.</figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 04 TESTING ============ -->
+    <section class="cs-section tint" id="testing">
+      <div class="wrap">
+        <div class="cs-head">
+          <span class="chapter-num">04 · Testing</span>
+          <h2>Watching people use it changed a lot</h2>
+          <p>I planned and led two rounds of think-aloud usability testing on our paper prototype. Classmates from two other teams acted as first-time parents, and we watched where they hesitated, got lost or misunderstood something.</p>
+        </div>
+
+        <div class="grid-2">
+          <div class="panel">
+            <h3 class="sub-head" style="font-size:22px">The three tasks</h3>
+            <ol class="task-list">
+              <li><div><b>Respond to a content alert</b>Find a suspicious AI video alert, understand why it was flagged, then block, allow or monitor it.</div></li>
+              <li><div><b>Set screen time limits</b>Choose a child profile, set a daily limit and restricted hours, then save.</div></li>
+              <li><div><b>Learn about AI safety</b>Search for a topic on AI misinformation, open a resource and save it.</div></li>
+            </ol>
+          </div>
+          <div class="panel">
+            <h3 class="sub-head" style="font-size:22px">What we wanted to learn</h3>
+            <ul class="worked" style="gap:12px">
+              <li>Can first-time users finish multi-step tasks without help?</li>
+              <li>Are buttons, labels and workflows clear?</li>
+              <li>How do people read alerts, monitoring options and recommendations?</li>
+              <li>Do the learning resources feel useful and easy to find?</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="block">
+          <div class="tabs" role="tablist" aria-label="Testing rounds">
+            <button class="tab" role="tab" id="t-r1" aria-controls="p-r1" aria-selected="true">Round 1</button>
+            <button class="tab" role="tab" id="t-r2" aria-controls="p-r2" aria-selected="false">Round 2</button>
+          </div>
+          <div class="panel">
+            <div class="tab-panel round" role="tabpanel" id="p-r1" aria-labelledby="t-r1">
+              <img class="zoomable" src="images/test-round1.webp" alt="A participant pointing at the paper prototype during testing" loading="lazy">
+              <div>
+                <h4>What worked</h4>
+                <ul class="worked">
+                  <li>Participants understood the app's purpose and main workflow.</li>
+                  <li>The dashboard helped people find sections and finish most tasks on their own.</li>
+                  <li>People liked having alerts, monitoring and learning in one app.</li>
+                </ul>
+                <h4>Where people got stuck</h4>
+                <ul class="issues">
+                  <li>No clear, consistent way back to the dashboard.</li>
+                  <li>"Monitor" was confusing. How was it different from blocking?</li>
+                  <li>Unclear where alerts or search results would lead.</li>
+                  <li>Some confused whether the games section was for parents or kids.</li>
+                </ul>
+              </div>
+            </div>
+            <div class="tab-panel round" role="tabpanel" id="p-r2" aria-labelledby="t-r2" hidden>
+              <img class="zoomable" src="images/test-round2.webp" alt="A participant marking up the paper prototype with a pencil" loading="lazy">
+              <div>
+                <h4>What worked</h4>
+                <ul class="worked">
+                  <li>Participants completed the main workflow and understood the app's goal.</li>
+                  <li>The child profile structure felt thoughtful and intuitive for parents with more than one child.</li>
+                </ul>
+                <h4>Where people got stuck</h4>
+                <ul class="issues">
+                  <li>Onboarding and sign-up language felt unclear.</li>
+                  <li>The "Monitor" option was still confusing, which confirmed round 1.</li>
+                  <li>Timer controls, blocking settings and screen time restrictions were hard to use.</li>
+                  <li>Searching for learning topics felt unintuitive and disorganized.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="block">
+          <figure class="figure">
+            <img class="zoomable" src="images/journey-map.webp" alt="User journey map with four phases, showing feelings, pain points and opportunities" loading="lazy">
+            <figcaption><b>User journey map.</b> Feelings dipped at the alert and controls steps, which is where we focused our changes. Click to enlarge.</figcaption>
+          </figure>
+        </div>
+
+        <div class="block">
+          <h3 class="sub-head">What we changed because of testing</h3>
+          <div class="table-wrap">
+            <table class="changes">
+              <thead><tr><th>What we saw</th><th>What we changed</th><th>Why it matters</th></tr></thead>
+              <tbody>
+                <tr><td>"Monitor" vs. "Block" was confusing in both rounds</td><td>Added short descriptions and inline tooltips for Block, Allow and Monitor</td><td>Parents can act on an alert with confidence</td></tr>
+                <tr><td>Unclear what happened after tapping an alert</td><td>Added real timestamps, alert badges and Urgent, Resolved and All tabs</td><td>Parents see what's new and what's handled at a glance</td></tr>
+                <tr><td>No consistent way back home</td><td>Added a bottom navigation bar on every screen</td><td>Five core areas are always one tap away</td></tr>
+                <tr><td>Timer and restriction controls weren't intuitive</td><td>Simple sliders and toggles with plain labels like "No screens after 8:00 PM"</td><td>Settings read like everyday language</td></tr>
+                <tr><td>Learning resources felt disorganized and unclear for who</td><td>Split Co-Learn into For Parents, For Kids and Together tabs, with modules and levels</td><td>Each person finds content meant for them</td></tr>
+                <tr><td>Onboarding language was unclear</td><td>A five-step quiz with a progress bar that personalizes alerts and lessons by age</td><td>Setup feels short and tailored</td></tr>
+                <tr><td>Screens felt inconsistent</td><td>One blue, one type style and repeated card patterns across all screens</td><td>The app feels trustworthy and learnable</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="block">
+          <h3 class="sub-head">Heuristic evaluation</h3>
+          <div class="heuristics">
+            <div class="panel">
+              <h4 class="chapter-num" style="margin-bottom:16px">Holding up well</h4>
+              <ul>
+                <li><b>Visibility of system status</b>A progress bar shows how much of the onboarding quiz is left.</li>
+                <li><b>Match with the real world</b>Nav icons (home, bell, shield, book, person) map to familiar meanings.</li>
+                <li><b>Consistency and standards</b>The same blue, rounded tabs and selected states everywhere.</li>
+                <li><b>Recognition over recall</b>Learning modules are personalized from the quiz and recent activity.</li>
+              </ul>
+            </div>
+            <div class="panel">
+              <h4 class="chapter-num" style="margin-bottom:16px">Room to grow</h4>
+              <ul>
+                <li><b>Help users with errors</b>Add a quick "Are you sure?" check when quiz answers contradict each other.</li>
+                <li><b>User control and freedom</b>Let parents delete a child's screen time data from Privacy and Data.</li>
+                <li><b>Learnability</b>A short tutorial after onboarding, since there's a lot to take in at first.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 05 SOLUTION ============ -->
+    <section class="cs-section" id="solution">
+      <div class="wrap">
+        <div class="cs-head">
+          <span class="chapter-num">05 · Solution</span>
+          <h2>Explore the final prototype</h2>
+          <p>I designed and built all 10 high-fidelity screens in Figma. Pick a screen to see what it does and which research finding it came from.</p>
+        </div>
+
+        <div class="explorer">
+          <div class="screen-list" id="screen-list"></div>
+
+          <div>
+            <div class="device"><img id="device-img" src="images/screen-dashboard.webp" alt="Home dashboard screen"></div>
+            <div class="device-nav">
+              <button class="arrow" id="scr-prev" aria-label="Previous screen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg></button>
+              <span class="counter" id="scr-count">5 / 10</span>
+              <button class="arrow" id="scr-next" aria-label="Next screen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"/></svg></button>
+            </div>
+          </div>
+
+          <div class="screen-info" aria-live="polite">
+            <span class="chapter-num" id="scr-flow">Everyday use</span>
+            <h3 id="scr-title">Home dashboard</h3>
+            <p class="what" id="scr-what"></p>
+            <div class="why"><b>Why it's designed this way</b><p id="scr-why"></p></div>
+            <p class="from" id="scr-from"></p>
+            <a class="link" href="https://www.figma.com/proto/gJAdakdcy52HbfabrVJKoQ/Kidvisor---AI-Learning-App_INFO-380-Team-22?node-id=2-2&amp;p=f&amp;t=HT3lmZEZk5pfbrjX-1&amp;scaling=scale-down&amp;content-scaling=fixed&amp;page-id=0%3A1&amp;starting-point-node-id=2%3A2" target="_blank" rel="noopener">Click through it yourself in Figma ↗</a>
+          </div>
+        </div>
+
+        <div class="block">
+          <h3 class="sub-head">The full flow</h3>
+          <div class="flowstrip" id="flowstrip"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 06 REFLECTION ============ -->
+    <section class="cs-section ice" id="reflection">
+      <div class="wrap">
+        <div class="cs-head">
+          <span class="chapter-num">06 · Reflection</span>
+          <h2>What this project taught me</h2>
+        </div>
+        <blockquote class="reflect-quote">I often thought of design as simply creating something innovative or visually appealing. This class taught me that empathy for people is the backbone of good design, where every feature and decision is grounded in a real user need.</blockquote>
+
+        <div class="reflect-grid">
+          <article class="panel">
+            <h3>How the idea grew</h3>
+            <p>KidVisor started as a basic monitoring app. Listening to parents turned it into something more holistic, focused on awareness, learning together and community. Some of our strongest ideas came from listening to users, challenging our assumptions and being willing to revise our work.</p>
+          </article>
+          <article class="panel">
+            <h3>What was hard</h3>
+            <p>Balancing child safety with parental control while keeping the app simple. AI-generated content is a huge topic, so deciding what KidVisor would and wouldn't do took a lot of discussion early on. So did deciding what to show without overwhelming parents.</p>
+          </article>
+          <article class="panel">
+            <h3>What I'd do next</h3>
+            <ul>
+              <li>Test with real parents, since our testers were classmates role-playing as parents.</li>
+              <li>Refine the onboarding and how alerts explain flagged content.</li>
+              <li>Add kid-centered lessons and a stronger parent community.</li>
+              <li>Explore how reliable AI detection would be and how to protect family data.</li>
+            </ul>
+          </article>
+        </div>
+
+        <p class="reflect-quote" style="font-size:clamp(20px,2.4vw,26px); margin-top:56px">In the end, I also learned a life mindset: approach problems with curiosity and try things out even when the path forward isn't completely clear.</p>
+
+        <div class="block">
+          <h3 class="sub-head" style="font-size:20px">Team</h3>
+          <div class="team">
+            <div>Adiba Saadullah <span>· Project manager, research, usability testing, hi-fi prototype</span></div>
+            <div>Khadija Saho <span>· Ideation and team progress</span></div>
+            <div>Ruth Karen Nakigozi <span>· Facilitator and note taker</span></div>
+            <div>Sruti Banerjee <span>· Research lead</span></div>
+          </div>
+          <p class="note">With thanks to Professor Johnny Cho and the INFO 360 teaching team.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ END ============ -->
+    <section class="next-band">
+      <div class="wrap">
+        <div class="next-text">
+          <span class="logo logo-lg">Kidv<svg class="logo-i" viewBox="0 0 22 40" aria-hidden="true"><circle cx="11" cy="6" r="4.6" fill="currentColor"/><path d="M3 15.5 L11 19 L19 15.5 M11 19 V29 M11 29 L6.5 38 M11 29 L15.5 38" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/></svg>sor</span>
+          <h2>Thanks for reading.</h2>
+          <p>KidVisor was designed by Team 22 in INFO 360 at the University of Washington. This case study was written and built by Adiba Saadullah.</p>
+        </div>
+        <div class="kv-actions">
+          <a class="btn btn-white" href="../index.html#work">See more of Adiba's work →</a>
+          <a class="btn btn-ghost" href="https://www.figma.com/proto/gJAdakdcy52HbfabrVJKoQ/Kidvisor---AI-Learning-App_INFO-380-Team-22?node-id=2-2&amp;p=f&amp;t=HT3lmZEZk5pfbrjX-1&amp;scaling=scale-down&amp;content-scaling=fixed&amp;page-id=0%3A1&amp;starting-point-node-id=2%3A2" target="_blank" rel="noopener">Try the prototype ↗</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <span>© <span id="year">2026</span> Adiba Saadullah</span>
+      <a href="../index.html">Adiba's portfolio</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
