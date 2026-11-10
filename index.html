@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Adiba Saadullah</title>
+  <meta name="description" content="Adiba Saadullah, Informatics student at the University of Washington. UX design, product, and work that helps people.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..600,0..100;1,9..144,300..600,0..100&family=Pinyon+Script&display=swap">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- ============ NAV ============ -->
+  <header class="nav">
+    <div class="wrap nav-inner">
+      <a class="monogram" href="#top" aria-label="Adiba Saadullah, home"><span>A</span><span>S</span></a>
+      <nav aria-label="Main">
+        <ul class="nav-links">
+          <li><a href="#work">Work</a></li>
+          <li><a href="#about">About</a></li>
+          <li class="hide-sm"><a href="#beyond">Beyond Work</a></li>
+          <li class="hide-sm"><a href="resume.pdf">Resume</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div class="hero-text">
+          <span class="eyebrow">Informatics at the University of Washington</span>
+          <h1>Hi, I'm Adiba. I design things that <em>help</em> people.</h1>
+          <p class="hero-lede">I'm drawn to work that serves families and communities. I bring research, organization, and a lot of heart to every project, especially when I believe in the mission.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#work">View my work</a>
+            <a class="btn btn-secondary" href="resume.pdf">Resume</a>
+          </div>
+          <span class="hero-status">Looking for summer 2027 UX and product internships</span>
+        </div>
+
+        <!-- Swap the placeholder for your photo:
+             <div class="arch"><img src="images/adiba.jpg" alt="Adiba smiling by a window"></div> -->
+        <div class="arch" role="img" aria-label="Portrait placeholder">
+          <div class="arch-placeholder">
+            <svg viewBox="0 0 120 170" aria-hidden="true">
+              <path d="M60 92 C60 120 58 140 60 166" fill="none" stroke="#6F7E62" stroke-width="2" stroke-linecap="round"/>
+              <path d="M59 140 C44 128 34 110 36 92 C48 104 56 118 59 140 Z" fill="none" stroke="#6F7E62" stroke-width="1.6" stroke-linejoin="round"/>
+              <path d="M40 46 C38 76 46 92 60 94 C74 92 82 76 80 46 L70 58 L60 38 L50 58 Z" fill="#FDFCFB" stroke="#A9844F" stroke-width="1.6" stroke-linejoin="round"/>
+            </svg>
+            <p>Your photo goes here</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SELECTED WORK ============ -->
+    <section class="section" id="work">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">Selected work</span>
+            <h2>Projects I've poured myself into</h2>
+          </div>
+          <div class="shelf-controls">
+            <span class="counter" aria-live="polite">1 / 4</span>
+            <button class="arrow" id="prev" aria-label="Previous project">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg>
+            </button>
+            <button class="arrow" id="next" aria-label="Next project">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <div class="shelf">
+          <!-- Card 1: KidVisor -->
+          <a class="card" href="kidvisor/index.html">
+            <div class="card-visual">
+              <div class="phone" aria-hidden="true">
+                <div class="score">Health score <b>72</b></div>
+                <div class="bar"><i></i></div>
+                <div class="row alert"></div>
+                <div class="row"></div>
+                <div class="row"></div>
+              </div>
+            </div>
+            <div class="card-body">
+              <span class="eyebrow">UX research and design · 2026</span>
+              <h3>KidVisor</h3>
+              <p>Helping parents understand and guide their kids' exposure to AI-generated content.</p>
+              <div class="tags"><span class="tag">UX research</span><span class="tag">Usability testing</span><span class="tag">Figma</span></div>
+              <span class="link">Read case study →</span>
+            </div>
+          </a>
+
+          <!-- Card 2: MAPS Community Services -->
+          <a class="card" href="#work">
+            <div class="card-visual">
+              <div class="stat-visual">
+                <b>8,471</b>
+                <span>people brought into one client system</span>
+              </div>
+            </div>
+            <div class="card-body">
+              <span class="eyebrow">Data and operations · 2026</span>
+              <h3>MAPS Community Services</h3>
+              <p>Turning years of scattered client records into one system a nonprofit team can trust.</p>
+              <div class="tags"><span class="tag">Data cleaning</span><span class="tag">Systems</span><span class="tag">Nonprofit</span></div>
+              <span class="link">Read case study →</span>
+            </div>
+          </a>
+
+          <!-- Card 3: GSU registration -->
+          <a class="card" href="#work">
+            <div class="card-visual">
+              <div class="board" aria-hidden="true">
+                <div><small>To do</small><span></span><span></span><span></span></div>
+                <div><small>Doing</small><span class="on"></span><span></span></div>
+                <div><small>Done</small><span class="on"></span><span class="on"></span><span class="on"></span></div>
+              </div>
+            </div>
+            <div class="card-body">
+              <span class="eyebrow">Product management · 2026</span>
+              <h3>GSU Course Registration</h3>
+              <p>Rethinking course registration for students, advisors, and staff, from vision to backlog.</p>
+              <div class="tags"><span class="tag">Product strategy</span><span class="tag">Jira</span><span class="tag">Prototyping</span></div>
+              <span class="link">Read case study →</span>
+            </div>
+          </a>
+
+          <!-- Card 4: Reham's Cake Gallery -->
+          <a class="card" href="#work">
+            <div class="card-visual">
+              <div class="ticket" aria-hidden="true">
+                <strong>Pickup order</strong>
+                <div class="line"><span>Pistachio cake</span><span>×1</span></div>
+                <div class="line"><span>Basbousa tray</span><span>×2</span></div>
+                <span class="pill">Ready Saturday</span>
+              </div>
+            </div>
+            <div class="card-body">
+              <span class="eyebrow">Web development · In progress</span>
+              <h3>Reham's Cake Gallery</h3>
+              <p>An ordering and pickup site for a local dessert business that didn't have a website yet.</p>
+              <div class="tags"><span class="tag">HTML and CSS</span><span class="tag">React</span><span class="tag">Client project</span></div>
+              <span class="link">Read case study →</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ VALUES ============ -->
+    <section class="section values">
+      <div class="wrap values-grid">
+        <blockquote>I believe good design is a quiet form of service.</blockquote>
+        <div class="principles">
+          <div>
+            <h3>Listen first</h3>
+            <p>I start with the people who will actually use the thing, and I keep asking until I understand what they need.</p>
+          </div>
+          <div>
+            <h3>Make it calm and clear</h3>
+            <p>I like turning messy situations into simple, organized systems that feel good to use.</p>
+          </div>
+          <div>
+            <h3>Leave it better</h3>
+            <p>I want my work to make a real difference for communities, not just look nice in a deck.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section class="section" id="about">
+      <div class="wrap about-grid">
+        <div class="about-story">
+          <span class="eyebrow">About me</span>
+          <h2>A little about me</h2>
+          <p>I moved to the United States as a child and changed homes and schools more times than I can count. It taught me to adapt quickly, and to notice the people who are still finding their footing.</p>
+          <p>Today I study Informatics at the University of Washington, teach at a weekend school, and spend my free time on community work. I love rainy days, fall, a good book, and making messy things simple and beautiful.</p>
+          <a class="link" href="#about">Read my full story →</a>
+        </div>
+        <aside class="facts">
+          <dl>
+            <div><dt>Studying</dt><dd>B.S. Informatics, University of Washington, 2028</dd></div>
+            <div><dt>Interested in</dt><dd>UX design, product management, and work with social impact</dd></div>
+            <div><dt>Tools</dt><dd>Figma, Canva, Jira, Excel, R, HTML and CSS</dd></div>
+            <div><dt>Languages</dt><dd>English, Bengali, and Hindi</dd></div>
+          </dl>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ============ BEYOND WORK ============ -->
+    <section class="section beyond" id="beyond">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">Beyond work</span>
+            <h2>The other ways I create</h2>
+            <p class="section-sub">The parts of me that don't fit neatly on a resume, but shape how I work.</p>
+          </div>
+        </div>
+        <div class="beyond-grid">
+          <article class="tile feature">
+            <span class="num">Design</span>
+            <h3>Posters and social posts</h3>
+            <p>Campaigns for Students for Justice at Bellevue College, posts for my MSA, and personal Canva projects.</p>
+          </article>
+          <article class="tile">
+            <span class="num">Teaching</span>
+            <h3>Rahma Academy and camps</h3>
+            <p>Teaching Qur'an recitation and Arabic literacy, designing lessons, and tutoring my brother.</p>
+          </article>
+          <article class="tile">
+            <span class="num">Community</span>
+            <h3>Showing up</h3>
+            <p>Volunteering and staying close to the communities I hope to serve.</p>
+          </article>
+          <article class="tile">
+            <span class="num">Writing</span>
+            <h3>Stories and reflections</h3>
+            <p>Short stories and quiet thoughts I've written since school.</p>
+          </article>
+          <article class="tile">
+            <span class="num">Photography</span>
+            <h3>Soft light, small moments</h3>
+            <p>A few frames of the everyday things I notice.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="contact" id="contact">
+      <div class="wrap">
+        <div class="contact-inner">
+          <span class="eyebrow">Contact</span>
+          <h2>Let's talk.</h2>
+          <p>I'm looking for summer 2027 internships in UX design and product management. I'd love to hear from you.</p>
+          <div class="email-row">
+            <span id="email">your.email@example.com</span>
+            <button class="copy-btn" type="button">Copy</button>
+          </div>
+          <div class="contact-links">
+            <a class="link" href="https://www.linkedin.com/">LinkedIn ↗</a>
+            <a class="link" href="resume.pdf">Resume ↗</a>
+          </div>
+          <p class="signature">Adiba</p>
+        </div>
+        <div class="footer-bottom">
+          <span>© <span id="year">2026</span> Adiba Saadullah</span>
+          <span>Designed and built by me</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
