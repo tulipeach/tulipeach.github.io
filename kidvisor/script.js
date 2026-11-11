@@ -1,4 +1,4 @@
-// Interactions for the KidVisor case study page.
+// Interactions for the Kidvisor case study page.
 
 // ---------- 1. Nav line on scroll ----------
 const nav = document.querySelector(".nav");
@@ -51,6 +51,10 @@ document.querySelectorAll('[role="tablist"]').forEach((list) => {
 
 // ---------- 4. Prototype explorer ----------
 const screens = [
+  { id: "splash", flow: "Getting started", title: "Splash",
+    what: "The first thing parents see: the Kidvisor name and its promise, supporting parents in the age of intelligent media.",
+    why: "A calm, simple start sets the tone for an app about a stressful topic.",
+    from: "Our problem statement and design question" },
   { id: "signup", flow: "Getting started", title: "Welcome",
     what: "The first screen makes one clear promise: real-time content monitoring, alerts and literacy tools, all in one place.",
     why: "A monitoring app asks parents for a lot of trust, so privacy is said up front with \"Your data is never sold.\"",
@@ -64,7 +68,7 @@ const screens = [
     why: "Testers found the onboarding language unclear, so each step now asks one simple question, with a progress bar showing how much is left.",
     from: "Usability testing round 2 and heuristic review" },
   { id: "profile-created", flow: "Getting started", title: "Profile created",
-    what: "Confirms the child's profile and lists exactly what KidVisor will now do, with an option to add another child.",
+    what: "Confirms the child's profile and lists exactly what Kidvisor will now do, with an option to add another child.",
     why: "Being clear about what the app monitors builds trust. Testers loved the child profiles because many parents have more than one kid.",
     from: "Usability testing: child profiles felt thoughtful and intuitive" },
   { id: "dashboard", flow: "Everyday use", title: "Home dashboard",
@@ -73,7 +77,7 @@ const screens = [
     from: "Insight 3: parents want simple, low-effort support" },
   { id: "alerts", flow: "Everyday use", title: "Alerts",
     what: "Urgent, Resolved and All tabs. Each alert explains why it was flagged, with Block, Allow and Monitor choices and healthier alternatives.",
-    why: "This is the heart of KidVisor. Other tools only block, so every alert explains what happened, which helps parents start a real conversation.",
+    why: "This is the heart of Kidvisor. Other tools only block, so every alert explains what happened, which helps parents start a real conversation.",
     from: "Insight 1 and the \"Monitor vs. Block\" confusion from both test rounds" },
   { id: "controls", flow: "Everyday use", title: "Control center",
     what: "Daily screen time limits, bedtime blocks, AI content blocking, age-based filters and stranger interaction alerts.",
