@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>MAPS Community Services | Adiba Saadullah</title>
+  <meta name="description" content="How I helped MAPS Community Services move years of scattered client records into one system, OMNI. A data and operations case study by Adiba Saadullah.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..600,0..100;1,9..144,300..600,0..100&family=Pinyon+Script&display=swap">
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="maps.css">
+</head>
+<body>
+  <div class="progress" aria-hidden="true"><i></i></div>
+
+  <!-- ============ NAV ============ -->
+  <header class="nav">
+    <div class="wrap nav-inner">
+      <a class="monogram" href="../index.html" aria-label="Adiba Saadullah, home"><span>A</span><span>S</span></a>
+      <nav aria-label="Case study sections">
+        <ul class="nav-links">
+          <li class="hide-sm"><a href="#problem">Problem</a></li>
+          <li class="hide-sm"><a href="#process">Process</a></li>
+          <li class="hide-sm"><a href="#decisions">Decisions</a></li>
+          <li class="hide-sm"><a href="#results">Results</a></li>
+          <li><a href="../index.html#work">← All work</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- ============ HERO ============ -->
+    <section class="cs-hero">
+      <div class="wrap">
+        <span class="eyebrow">Data and operations internship · 2026</span>
+        <h1>Bringing years of scattered client records into <em>one</em> system</h1>
+        <p class="cs-lede">MAPS Community Services helps refugees, immigrants, seniors and families across the Eastside. They brought me in to figure out why their data wasn't working, recommend a better platform, and help them get there.</p>
+
+        <dl class="meta">
+          <div><dt>Role</dt><dd>Data and Operations Intern</dd></div>
+          <div><dt>Timeline</dt><dd>May to October 2026</dd></div>
+          <div><dt>Worked with</dt><dd>The Director, the OMNI developer, case managers and program staff</dd></div>
+          <div><dt>Tools</dt><dd>Excel, Python, R, Knack, OMNI, Box, Canva</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- ============ STATS ============ -->
+    <section class="stats" aria-label="Results at a glance">
+      <div class="wrap stats-grid">
+        <div class="stat"><b data-count="8471">8,471</b><span>unique people now in one system, one record each</span></div>
+        <div class="stat"><b data-count="13000" data-suffix="+">13,000+</b><span>past cases from 2022 to 2026 matched to their clients</span></div>
+        <div class="stat"><b data-count="1057">1,057</b><span>people served by more than one program, visible for the first time</span></div>
+        <div class="stat"><b data-count="558">558</b><span>failed import rows reviewed, sorted by cause and documented</span></div>
+      </div>
+    </section>
+
+    <!-- ============ 01 PROBLEM ============ -->
+    <section class="section" id="problem">
+      <div class="wrap">
+        <div class="cs-head">
+          <span class="num">01</span>
+          <div>
+            <span class="eyebrow">The problem</span>
+            <h2>Years of impact, and no system that could show it</h2>
+          </div>
+        </div>
+
+        <div class="split">
+          <div class="prose">
+            <p>When I joined, client information lived in Knack, Google Forms, spreadsheets, paper files and staff members' heads, with finance in a separate system. The two main programs, stabilization and small business support, ran almost independently, so no one could see a client's full path.</p>
+            <p>This mattered for funding. MAPS reports to about seven grant sources, and funders ask for specific counts like unduplicated people and households by city, income and program. Every report meant exporting everything and filtering it by hand.</p>
+          </div>
+
+          <!-- Before / after diagram -->
+          <figure class="ba" aria-label="Before: six separate sources. After: one system.">
+            <div class="ba-col">
+              <small>Before</small>
+              <div class="chips">
+                <span>Knack</span><span>Google Forms</span><span>Spreadsheets</span>
+                <span>Paper files</span><span>Staff memory</span><span>QuickBooks</span>
+              </div>
+            </div>
+            <div class="ba-arrow" aria-hidden="true">
+              <svg viewBox="0 0 48 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12h42M36 4l8 8-8 8"/></svg>
+            </div>
+            <div class="ba-col after">
+              <small>After</small>
+              <div class="one">
+                <strong>OMNI</strong>
+                <span>One record per person, with intake, cases, events and grants in one place</span>
+              </div>
+            </div>
+          </figure>
+        </div>
+
+        <div class="pain-grid">
+          <article class="pain"><h3>Reporting was manual</h3><p>There was no way to tie a client to a grant or pull a set time period, so staff filtered exports by hand in Excel.</p></article>
+          <article class="pain"><h3>Funder counts were hard</h3><p>Unduplicated counts by city, age or program needed manual cleanup before every report.</p></article>
+          <article class="pain"><h3>Impact was invisible</h3><p>Services were recorded, but results weren't. MAPS could say how many people it served, not how their lives changed.</p></article>
+          <article class="pain"><h3>Knowledge walked out the door</h3><p>When one staff member left, key information about a whole program's participants left with them.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 02 PROCESS ============ -->
+    <section class="section band" id="process">
+      <div class="wrap">
+        <div class="cs-head">
+          <span class="num">02</span>
+          <div>
+            <span class="eyebrow">What I did</span>
+            <h2>From evaluation to handoff, in six steps</h2>
+            <p class="section-sub">There were no set instructions for most of this. Each step shaped the next one, and a lot of it took several rounds to get right.</p>
+          </div>
+        </div>
+
+        <ol class="steps">
+          <li class="step">
+            <span class="step-n">1</span>
+            <div>
+              <h3>Evaluate the old system</h3>
+              <p>I wrote a Knack System Report over three rounds of feedback, covering what it did, what it lacked and what any replacement would need. I defined the client profile fields from grant requirements and helped compare options like SoPact, CaseWorthy and Salesforce. By mid-June, MAPS chose OMNI.</p>
+            </div>
+          </li>
+          <li class="step">
+            <span class="step-n">2</span>
+            <div>
+              <h3>Map how casework really happens</h3>
+              <p>I traced the full casework flow in OMNI, from a new client walking in to a case closing, and confirmed each step with a case manager. The flowchart gives new staff a clear picture without needing prior experience.</p>
+            </div>
+          </li>
+          <li class="step">
+            <span class="step-n">3</span>
+            <div>
+              <h3>Merge every client list</h3>
+              <p>I combined client lists from programs like Ramadan Food Box, Eid al-Adha, Senior Connections and Food and Gas Cards, plus years of Knack history, into one template. I standardized names, phones, emails, dates, cities, addresses and demographic fields.</p>
+            </div>
+          </li>
+          <li class="step">
+            <span class="step-n">4</span>
+            <div>
+              <h3>Preserve the history</h3>
+              <p>The 13,000+ past cases had only a case ID, a date and a client name. No phone, no email, no birthday. I matched cases to clients by normalized name and resolved a few hundred mismatches by hand.</p>
+            </div>
+          </li>
+          <li class="step">
+            <span class="step-n">5</span>
+            <div>
+              <h3>Untangle the failed imports</h3>
+              <p>OMNI rejected 558 rows. I sorted every one by cause, fixed what could be fixed (276 rows approved for import), and organized the rest into tabs with a reason for each, so the developer could decide quickly.</p>
+            </div>
+          </li>
+          <li class="step">
+            <span class="step-n">6</span>
+            <div>
+              <h3>Hand it off well</h3>
+              <p>I wrote a summary for the MAPS Board and a detailed handoff document, and every file I touched has a notes tab explaining my process and judgment calls, so the work can continue without me.</p>
+            </div>
+          </li>
+        </ol>
+
+        <figure class="flow">
+          <div class="flow-frame">
+            <img src="images/omni-flowchart.webp" alt="OMNI casework process map: a new client is searched in OMNI, an existing profile is opened or a new one is created, the client applies to a program, a case manager reviews it, and the case is approved, declined or withdrawn, then services are logged until the case closes as completed, withdrawn or referred out." loading="eager" width="1920" height="760">
+          </div>
+          <figcaption>The OMNI casework process map I made in Canva, confirmed step by step with a case manager.<span class="swipe"> Scroll sideways to see the full map.</span></figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ============ 03 DECISIONS ============ -->
+    <section class="section" id="decisions">
+      <div class="wrap">
+        <div class="cs-head">
+          <span class="num">03</span>
+          <div>
+            <span class="eyebrow">Decisions I made</span>
+            <h2>Small calls that kept the data trustworthy</h2>
+          </div>
+        </div>
+
+        <div class="decision-grid">
+          <article class="decision">
+            <span class="d-tag">Identity</span>
+            <h3>One phone number, one person</h3>
+            <p>Phone number became the main identifier across every program. When records conflicted, Knack data took priority over form data.</p>
+          </article>
+          <article class="decision">
+            <span class="d-tag">Privacy</span>
+            <h3>No AI on client data</h3>
+            <p>These are real families' records, so identifying columns were cleaned by hand in Excel, and files were shared only through a secure folder.</p>
+          </article>
+          <article class="decision">
+            <span class="d-tag">Honesty</span>
+            <h3>Flag it, don't guess</h3>
+            <p>When a call was uncertain, I marked the row for review instead of guessing. A "Fix Note" column explains every change I made.</p>
+          </article>
+          <article class="decision">
+            <span class="d-tag">History</span>
+            <h3>Keep programs that ended</h3>
+            <p>I mapped about 12 Knack programs to OMNI categories. Discontinued ones went into a legacy section, so their history wasn't lost.</p>
+          </article>
+          <article class="decision">
+            <span class="d-tag">Quality</span>
+            <h3>Catch what the system missed</h3>
+            <p>OMNI's duplicate check missed obvious matches, like the same name and phone, or the same email with a differently formatted phone. I found and merged them.</p>
+          </article>
+          <article class="decision">
+            <span class="d-tag">Prevention</span>
+            <h3>Fix it at the source</h3>
+            <p>Most problems came from inconsistent entry, so I recommended a short data-entry standard, staff training, and one owner for regular checks.</p>
+          </article>
+        </div>
+
+        <!-- Cleaning example -->
+        <div class="clean">
+          <div class="clean-head">
+            <h3>What cleaning one record looked like</h3>
+            <span>Sample data, not a real client</span>
+          </div>
+          <div class="clean-rows">
+            <div class="row before">
+              <small>As entered</small>
+              <code><span>fatima  AHMED</span><span>(425)5550142</span><span>Bellevue , wa</span><span>afghan</span></code>
+            </div>
+            <div class="row after">
+              <small>After cleanup</small>
+              <code><span>Fatima Ahmed</span><span>425-555-0142</span><span>Bellevue</span><span>Afghanistan</span></code>
+            </div>
+          </div>
+          <p class="clean-note">Multiply this by thousands of rows from more than ten sources, each with its own spelling habits, and that was the job.</p>
+        </div>
+
+        <div class="mapping">
+          <h3>How old programs found a home in OMNI</h3>
+          <div class="map-table" role="table" aria-label="Knack programs mapped to OMNI categories">
+            <div class="map-row head" role="row"><span role="columnheader">Knack program</span><span role="columnheader">OMNI category</span></div>
+            <div class="map-row" role="row"><span role="cell">Single Women Transitional Housing, Eviction Prevention, Emergency Utility Assistance</span><span role="cell">Housing Stabilization</span></div>
+            <div class="map-row" role="row"><span role="cell">Food Cards, Meal Cards, Gas Cards</span><span role="cell">Immediate Stabilization</span></div>
+            <div class="map-row" role="row"><span role="cell">Free Health Clinic, Hospital and Funeral Services, Household Items, Legal Services, Counselling</span><span role="cell">Legacy (inactive)</span></div>
+            <div class="map-row" role="row"><span role="cell">Other</span><span role="cell">General financial assistance</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 04 RESULTS ============ -->
+    <section class="section band" id="results">
+      <div class="wrap">
+        <div class="cs-head">
+          <span class="num">04</span>
+          <div>
+            <span class="eyebrow">Where things stand</span>
+            <h2>One platform, one record per person, and a history that's kept</h2>
+          </div>
+        </div>
+
+        <div class="results">
+          <div class="prose">
+            <p>OMNI now holds 8,471 unique people, along with households, active cases, and clients flagged for housing, disability or income concerns. For the first time, MAPS can see that 1,057 people were served by more than one program. Events and sign-ups live in the same system, and grants are linked to programs, which sets up grant-based reporting.</p>
+            <p>These counts only reflect what's been entered so far, so they understate the full amount of help MAPS gives.</p>
+          </div>
+          <aside class="next">
+            <h3>What comes next</h3>
+            <ul>
+              <li>A short data-entry standard (phone, full name and date of birth for every client), with staff training</li>
+              <li>One person who owns regular duplicate checks</li>
+              <li>Closing out the last historical cases</li>
+              <li>A community resource map of partner organizations, which I planned but didn't get to build</li>
+            </ul>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 05 REFLECTION ============ -->
+    <section class="section" id="reflection">
+      <div class="wrap">
+        <div class="cs-head">
+          <span class="num">05</span>
+          <div>
+            <span class="eyebrow">Reflection</span>
+            <h2>What I learned</h2>
+          </div>
+        </div>
+
+        <div class="learn-grid">
+          <article>
+            <h3>I can work with ambiguity</h3>
+            <p>Taking a pile of messy data and figuring out how to sort and clean it for migration was hard, confusing and very iterative. There were no set instructions, but I figured it out, and it showed me I'm flexible enough to find my own way.</p>
+          </article>
+          <article>
+            <h3>Seeing the whole system</h3>
+            <p>I'm proud that I traced how a system works from beginning to end and turned it into a picture that helps case managers do their jobs.</p>
+          </article>
+          <article>
+            <h3>Real work, real stakes</h3>
+            <p>I got to work inside a real team's back-end CRM. They brought me in to recommend a better path and help them get to a better platform, and I did it.</p>
+          </article>
+        </div>
+
+        <!-- Swap in the final LinkedIn wording once Gul posts it -->
+        <figure class="quote">
+          <blockquote>
+            <p>What stood out to me just as much as the technical work was Adiba's professionalism. That kind of honesty and ownership is rare, and it made the transition easy for our team. I'd recommend her to any organization looking for someone who can bring order to messy systems and communicate clearly while doing it.</p>
+          </blockquote>
+          <figcaption><strong>Gul Siddiqi</strong><span>Director, MAPS Community Services</span></figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ============ FOOTER ============ -->
+    <section class="cs-end">
+      <div class="wrap">
+        <div class="end-inner">
+          <span class="eyebrow">Thanks for reading</span>
+          <h2>Want to see more?</h2>
+          <div class="end-actions">
+            <a class="btn btn-primary" href="../kidvisor/index.html">Next: KidVisor</a>
+            <a class="btn btn-secondary" href="../index.html#work">All projects</a>
+          </div>
+          <p class="signature">Adiba</p>
+        </div>
+        <div class="footer-bottom">
+          <span>© 2026 Adiba Saadullah</span>
+          <span>Client details are kept private. All sample data is made up.</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    // Sticky nav border, reading progress, and gentle reveal on scroll
+    (function () {
+      var nav = document.querySelector('.nav');
+      var bar = document.querySelector('.progress i');
+      function onScroll() {
+        var y = window.scrollY;
+        if (nav) nav.classList.toggle('scrolled', y > 8);
+        var h = document.documentElement.scrollHeight - window.innerHeight;
+        if (bar) bar.style.transform = 'scaleX(' + (h > 0 ? y / h : 0) + ')';
+      }
+      window.addEventListener('scroll', onScroll, { passive: true });
+      onScroll();
+
+      var items = document.querySelectorAll('.pain, .step, .decision, .learn-grid article, .flow, .clean, .mapping, .quote, .ba');
+      if (!('IntersectionObserver' in window) || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+      items.forEach(function (el) { el.classList.add('reveal'); });
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+        });
+      }, { rootMargin: '0px 0px -8% 0px' });
+      items.forEach(function (el) { io.observe(el); });
+
+      // Count up the stats once
+      var stats = document.querySelectorAll('.stat b[data-count]');
+      var so = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (!e.isIntersecting) return;
+          so.unobserve(e.target);
+          var el = e.target, end = +el.dataset.count, suf = el.dataset.suffix || '', t0 = null;
+          function tick(t) {
+            if (!t0) t0 = t;
+            var p = Math.min((t - t0) / 1200, 1), v = Math.round(end * (1 - Math.pow(1 - p, 3)));
+            el.textContent = v.toLocaleString('en-US') + (p === 1 ? suf : '');
+            if (p < 1) requestAnimationFrame(tick);
+          }
+          requestAnimationFrame(tick);
+        });
+      }, { threshold: 0.6 });
+      stats.forEach(function (el) { so.observe(el); });
+    })();
+  </script>
+</body>
+</html>

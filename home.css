@@ -430,3 +430,72 @@ main { position: relative; z-index: 1; background: var(--bg); border-radius: 0 0
   .contact { position: relative; }
   main { border-radius: 0; box-shadow: none; }
 }
+
+/* ---------- v2.1 ---------- */
+/* Nav: always bordered, lightens on hover */
+.nav { border-bottom-color: var(--line); }
+.nav.scrolled { box-shadow: 0 8px 24px -18px rgba(23,18,15,.35); }
+.nav:hover { background: color-mix(in srgb, var(--card) 94%, transparent); }
+.menu hr { border: 0; border-top: 1px solid var(--line); margin: 6px 8px; }
+.menu a i.ring { background: transparent; border: 2px dashed var(--accent); }
+
+/* Card explore links */
+.pc-link { justify-self: start; margin-top: 6px; font-size: 13px; font-weight: 600; color: #7B1F33; text-decoration: none; border-bottom: 1px solid currentColor; line-height: 1.3; position: relative; z-index: 2; }
+.pc-link:hover { color: #17120F; }
+
+/* Slower stacking: more scroll room per card */
+.deck { gap: 32vh; }
+
+/* About photo */
+.about-photo { margin-top: 12px; aspect-ratio: 4 / 3; max-width: 520px; border-radius: var(--r-md); background: linear-gradient(155deg, var(--accent-soft), var(--surface)); border: 1px dashed var(--line); display: grid; place-items: center; overflow: hidden; }
+.about-photo span { font-size: 13px; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+.about-text img { margin-top: 12px; width: 100%; max-width: 520px; aspect-ratio: 4 / 3; object-fit: cover; border-radius: var(--r-md); }
+
+/* Grouped tools */
+.tool-groups { display: grid; grid-template-columns: 6fr 3fr 3fr 4fr; gap: 28px; }
+.tg h4 { margin: 0 0 12px; font-size: 14px; font-weight: 600; color: var(--ink); display: flex; align-items: center; gap: 8px; }
+.tg h4::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }
+.tg .tool-grid { grid-template-columns: repeat(auto-fill, minmax(84px, 1fr)); }
+.tg-design .tool-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.tool-grid i img { width: 100%; height: 100%; object-fit: contain; }
+@media (max-width: 1100px) { .tool-groups { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 640px) {
+  .deck { gap: 24px; }
+  .tool-groups { grid-template-columns: 1fr; }
+  .tg .tool-grid, .tg-design .tool-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+@media (max-width: 900px) { .deck { gap: 24px; } }
+
+/* Tool logos */
+.tool-grid i:has(img) { background: transparent; width: 48px; height: 48px; border-radius: 0; }
+.tool-grid i img { width: 100%; height: 100%; object-fit: contain; }
+.tg-design .tool-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+/* Tools: one row per group */
+.tool-groups { grid-template-columns: 1fr !important; gap: 14px; }
+.tg { display: grid; grid-template-columns: 220px 1fr; align-items: center; gap: 20px; padding: 14px 0; border-top: 1px solid var(--line); }
+.tg h4 { margin: 0; }
+.tg .tool-grid, .tg-design .tool-grid { display: flex !important; flex-wrap: wrap; gap: 12px; }
+.tg .tool-grid li { width: 112px; }
+@media (max-width: 640px) {
+  .tg { grid-template-columns: 1fr; gap: 12px; }
+  .tg .tool-grid li { width: calc((100% - 24px) / 3); }
+}
+
+/* Research card image strip, fading into the card */
+.rcard { padding-bottom: 0; }
+.rcard .rmeta { margin-top: 4px; }
+.rimg {
+  margin: auto -32px 0; height: 150px; position: relative; overflow: hidden;
+  background: linear-gradient(135deg, color-mix(in srgb, var(--r) 22%, transparent), color-mix(in srgb, var(--r) 6%, transparent));
+}
+.rimg::before { content: ""; position: absolute; inset: 0; z-index: 1; background: linear-gradient(to bottom, var(--card) 0%, color-mix(in srgb, var(--card) 40%, transparent) 45%, transparent 100%); }
+.rimg img { width: 100%; height: 100%; object-fit: cover; object-position: top; opacity: .75; filter: saturate(.9); transition: transform .6s var(--ease), opacity .4s; }
+.rcard:hover .rimg img { transform: scale(1.04); opacity: .9; }
+.rcard.ghost { padding-bottom: 32px; }
+.methods + .methods { margin-top: 10px; }
+@media (max-width: 640px) { .rimg { margin-inline: -26px; height: 120px; } }
+
+/* Photos load automatically from images/me/ when present */
+.pcard .face { position: relative; }
+.pcard .face img, .about-photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.about-photo { position: relative; border-style: solid; }

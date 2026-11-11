@@ -28,13 +28,14 @@
               <a href="maps/index.html"><i style="--c:#B8321F"></i><span><b>MAPS Community Services</b><small>Data and operations</small></span></a>
               <a href="#work" class="soon"><i style="--c:#4B2E83"></i><span><b>GSU Course Registration</b><small>Product management · soon</small></span></a>
               <a href="#work" class="soon"><i style="--c:#E7A3B1"></i><span><b>Reham's Cake Gallery</b><small>Web development · soon</small></span></a>
+              <hr>
+              <a href="#research"><i class="ring"></i><span><b>Research</b><small>Questions I'm chasing</small></span></a>
             </div>
           </li>
-          <li class="hide-md"><a href="#research">Research</a></li>
           <li class="hide-md"><a href="#play">Playground</a></li>
           <li class="hide-md"><a href="#about">About</a></li>
           <li class="hide-sm"><a href="resume.pdf">Resume</a></li>
-          <li class="hide-sm"><a href="https://www.linkedin.com/" aria-label="LinkedIn">LinkedIn</a></li>
+          <li class="hide-sm"><a href="https://www.linkedin.com/in/adiba-saadullah" target="_blank" rel="noopener" aria-label="LinkedIn">LinkedIn</a></li>
           <li><a class="btn btn-small" href="#contact">Say hi</a></li>
           <li>
             <button class="theme" id="theme" aria-label="Switch to dark mode">
@@ -55,36 +56,35 @@
         <div class="hero-text">
           <p class="kicker"><span class="dot"></span>Open to summer 2027 UX and product internships</p>
           <h1>Hi, I'm Adiba.<br><span class="soft">I design things that <em>help</em> people.</span></h1>
-          <p class="lede">Informatics student at the University of Washington. I turn messy, human problems into calm, clear tools for families and communities.</p>
+          <p class="lede">Informatics student at the University of Washington. I turn messy human problems into clear, thoughtful tools.</p>
           <div class="hero-actions">
             <a class="btn" href="#work">See my work</a>
             <a class="btn btn-ghost" href="resume.pdf">Resume</a>
           </div>
         </div>
 
-        <!-- Flip-through stack. Swap each .face background for a photo:
-             <div class="face"><img src="images/me-designer.jpg" alt="..."></div> -->
+        <!-- Flip-through stack. To add photos, upload them to images/me/ named designer.jpg, researcher.jpg, teacher.jpg, community-builder.jpg and creative.jpg -->
         <div class="stack-wrap">
           <div class="photo-stack" id="stack" role="button" tabindex="0" aria-label="Flip to the next card">
             <figure class="pcard" style="--bg:#7B1F33;--fg:#FBEFEF">
-              <div class="face"><span class="ph">Your photo</span></div>
-              <figcaption><b>Designer</b><span>Figma, research, and a lot of sticky notes</span></figcaption>
+              <div class="face"><span class="ph">Your photo</span><img src="images/me/designer.jpg" alt="" onerror="this.remove()"></div>
+              <figcaption><b>Designer</b><span>Figma, Canva and a lot of sketches</span><a href="#work" class="pc-link">Explore →</a></figcaption>
             </figure>
             <figure class="pcard" style="--bg:#2BA8E0;--fg:#F2FAFF">
-              <div class="face"><span class="ph">Your photo</span></div>
-              <figcaption><b>Researcher</b><span>Studying how families learn with AI</span></figcaption>
+              <div class="face"><span class="ph">Your photo</span><img src="images/me/researcher.jpg" alt="" onerror="this.remove()"></div>
+              <figcaption><b>Researcher</b><span>Studying how families learn with AI</span><a href="#research" class="pc-link">Explore →</a></figcaption>
             </figure>
             <figure class="pcard" style="--bg:#C9A27A;--fg:#2A1A10">
-              <div class="face"><span class="ph">Your photo</span></div>
-              <figcaption><b>Teacher</b><span>Weekend classes at Rahma Academy</span></figcaption>
+              <div class="face"><span class="ph">Your photo</span><img src="images/me/teacher.jpg" alt="" onerror="this.remove()"></div>
+              <figcaption><b>Teacher</b><span>The joy of teaching kids at Rahma Academy</span><a href="#play" data-k="teach" class="pc-link">Explore →</a></figcaption>
             </figure>
             <figure class="pcard" style="--bg:#4B2E83;--fg:#F3EEFF">
-              <div class="face"><span class="ph">Your photo</span></div>
-              <figcaption><b>Community builder</b><span>Grew a student org by 100+ members</span></figcaption>
+              <div class="face"><span class="ph">Your photo</span><img src="images/me/community-builder.jpg" alt="" onerror="this.remove()"></div>
+              <figcaption><b>Community builder</b><span>Grew a student org by 100+ members</span><a href="#play" data-k="posters" class="pc-link">Explore →</a></figcaption>
             </figure>
             <figure class="pcard" style="--bg:#E7A3B1;--fg:#3A1520">
-              <div class="face"><span class="ph">Your photo</span></div>
-              <figcaption><b>Photographer</b><span>Rainy days, soft light, small moments</span></figcaption>
+              <div class="face"><span class="ph">Your photo</span><img src="images/me/creative.jpg" alt="" onerror="this.remove()"></div>
+              <figcaption><b>Creative</b><span>An endless rush of ideas, in every medium</span><a href="#about" class="pc-link">Explore →</a></figcaption>
             </figure>
           </div>
           <p class="stack-hint"><span id="stack-count">1 / 5</span> · Click to flip</p>
@@ -203,18 +203,23 @@
           <h3>How do researchers study parents, children and AI learning together?</h3>
           <p>With a UW research team, I'm reviewing five years of studies on parent, child and AI interaction in education, and how each study frames the parent's role.</p>
           <span class="rmeta">With Dr. Johnny Cho's team · 2026</span>
+          <!-- Swap for an image: <div class="rimg"><img src="images/research-review.jpg" alt=""></div> -->
+          <div class="rimg" aria-hidden="true"></div>
         </article>
         <article class="rcard" style="--r:#1E93CB">
           <span class="rtag">UX research</span>
           <h3>What do parents actually worry about when it comes to AI content?</h3>
           <p>Four parent interviews and a survey showed that parents can't always tell what's AI-made, and want to understand, not just block.</p>
           <span class="rmeta">KidVisor · INFO 360 · 2026</span>
+          <div class="rimg" aria-hidden="true"><img src="kidvisor/images/journey-map.webp" alt="" loading="lazy"></div>
         </article>
         <article class="rcard" style="--r:#4F6B3A">
           <span class="rtag">Data analysis in R</span>
           <h3>Who does the world trust to regulate AI?</h3>
           <p>Using Pew's 2025 Global Attitudes survey, I compared trust in the US, China, the EU and people's own countries, and how age relates to feelings about AI.</p>
           <span class="rmeta">SOC 225 · 23 countries · 2026</span>
+          <!-- Swap for an image: <div class="rimg"><img src="images/research-pew.jpg" alt=""></div> -->
+          <div class="rimg" aria-hidden="true"></div>
         </article>
         <article class="rcard ghost">
           <span class="rtag">Next</span>
@@ -229,7 +234,7 @@
       <div class="wrap play-grid">
         <div class="play-intro">
           <span class="label">Playground</span>
-          <h2>The other ways <em>I create</em></h2>
+          <h2>Other ways <em>I create</em></h2>
           <p>Posters, teaching, photos and words. The parts of me that don't fit neatly on a resume, but shape how I work.</p>
           <div class="preview" id="preview" aria-hidden="true">
             <div class="pv" data-k="posters" style="--p:#7B1F33"><b>Campaign posters</b><span>Add your SFJ posters here</span></div>
@@ -241,7 +246,7 @@
         </div>
         <ul class="play-list">
           <li data-k="posters"><span class="pl-n">01</span><span class="pl-t">Campaign posters</span><span class="pl-m">Students for Justice · Canva</span></li>
-          <li data-k="msa"><span class="pl-n">02</span><span class="pl-t">Social posts</span><span class="pl-m">MSA PR and Volunteer Corps</span></li>
+          <li data-k="msa"><span class="pl-n">02</span><span class="pl-t">Social posts</span><span class="pl-m">PR for MSA Volunteer Corps</span></li>
           <li data-k="visual"><span class="pl-n">03</span><span class="pl-t">Visual design studio</span><span class="pl-m">INFO 362 · Illustrator, InDesign</span></li>
           <li data-k="teach"><span class="pl-n">04</span><span class="pl-t">Lesson design</span><span class="pl-m">Rahma Academy and summer camp</span></li>
           <li data-k="photo"><span class="pl-n">05</span><span class="pl-t">Photography</span><span class="pl-m">Soft light, small moments</span></li>
@@ -256,8 +261,11 @@
           <div class="about-text">
             <span class="label">About me</span>
             <h2>A little about <em>me</em></h2>
-            <p>I moved to the United States as a child and changed homes and schools more times than I can count. It taught me to adapt quickly, and to notice the people who are still finding their footing.</p>
-            <p>Today I study Informatics at the University of Washington, teach on weekends, and spend my free time on community work. I love rainy days, fall, a good book, and making messy things simple and beautiful.</p>
+            <p>I'm an empathetic, hands-on designer who keeps people at the center of everything I make. I love building human-centered, ethical technology, and I'm drawn to work that sits between technology, education and community.</p>
+            <p>Outside of class, I teach Islamic studies to kids in my mosque community, do PR for MSA Volunteer Corps, and volunteer whenever I can. I care deeply about social justice, human rights and the environment.</p>
+            <p>I love rainy days, fall, mood boards, coloring, making cute desserts, and making messy things simple and beautiful.</p>
+            <!-- To add your photo, upload it as images/me/about.jpg -->
+            <div class="about-photo"><span>Your photo</span><img src="images/me/about.jpg" alt="Adiba Saadullah" onerror="this.remove()"></div>
           </div>
 
           <div class="exp">
@@ -266,7 +274,7 @@
               <li><span class="when">2026</span><span class="what"><b>Data and Operations Intern</b>MAPS Community Services</span></li>
               <li><span class="when">Now</span><span class="what"><b>Research Assistant</b>Systematic review team, UW</span></li>
               <li><span class="when">Now</span><span class="what"><b>Teacher</b>Rahma Academy, MAPS</span></li>
-              <li><span class="when">Now</span><span class="what"><b>PR and Volunteer Corps</b>Muslim Students Association, UW</span></li>
+              <li><span class="when">Now</span><span class="what"><b>PR, MSA Volunteer Corps</b>Muslim Student Association, UW</span></li>
               <li><span class="when">Before UW</span><span class="what"><b>Marketing Manager, Interim President</b>Students for Justice, Bellevue College</span></li>
             </ol>
             <h3>Education</h3>
@@ -279,13 +287,23 @@
 
         <div class="skills">
           <h3>Tools I use</h3>
-          <ul class="tool-grid">
-            <li><i>Fi</i>Figma</li><li><i>Fj</i>FigJam</li><li><i>Ca</i>Canva</li><li><i>Ai</i>Illustrator</li>
-            <li><i>Ps</i>Photoshop</li><li><i>Id</i>InDesign</li><li><i>Mi</i>Miro</li><li><i>Ji</i>Jira</li>
-            <li><i>No</i>Notion</li><li><i>&lt;/&gt;</i>HTML and CSS</li><li><i>JS</i>JavaScript</li><li><i>Jv</i>Java</li>
-            <li><i>R</i>R</li><li><i>SQ</i>SQL</li><li><i>Xl</i>Excel</li><li><i>VS</i>VS Code</li>
-          </ul>
+          <div class="tool-groups">
+            <div class="tg tg-design"><h4>Design</h4><ul class="tool-grid">
+              <li><i><img src="images/tools/figma.png" alt=""></i>Figma / FigJam</li><li><i><img src="images/tools/canva.png" alt=""></i>Canva</li><li><i><img src="images/tools/illustrator.png" alt=""></i>Illustrator</li><li><i><img src="images/tools/photoshop.png" alt=""></i>Photoshop</li><li><i><img src="images/tools/indesign.png" alt=""></i>InDesign</li>
+            </ul></div>
+            <div class="tg"><h4>Product and teamwork</h4><ul class="tool-grid">
+              <li><i><img src="images/tools/jira.png" alt=""></i>Jira</li><li><i><img src="images/tools/notion.png" alt=""></i>Notion</li><li><i><img src="images/tools/miro.png" alt=""></i>Miro</li>
+            </ul></div>
+            <div class="tg"><h4>Data</h4><ul class="tool-grid">
+              <li><i><img src="images/tools/r.png" alt=""></i>R</li><li><i><img src="images/tools/sql.png" alt=""></i>SQL</li><li><i><img src="images/tools/excel.png" alt=""></i>Excel</li>
+            </ul></div>
+            <div class="tg"><h4>Code</h4><ul class="tool-grid">
+              <li><i><img src="images/tools/html.png" alt=""></i>HTML</li><li><i><img src="images/tools/css.png" alt=""></i>CSS</li><li><i><img src="images/tools/javascript.png" alt=""></i>JavaScript</li><li><i><img src="images/tools/vscode.png" alt=""></i>VS Code</li><li><i>Gh</i>Git / GitHub</li>
+            </ul></div>
+          </div>
           <p class="methods"><b>Methods</b> User interviews, surveys, usability testing, heuristic evaluation, personas, journey maps, storyboards, prototyping, user stories, backlog management, stakeholder analysis</p>
+          <p class="methods"><b>AI tools</b> Claude, ChatGPT and Gemini for research and productivity</p>
+          <p class="methods"><b>Learning now</b> Framer, Overleaf</p>
         </div>
       </div>
     </section>
@@ -297,11 +315,11 @@
       <span class="label">Contact</span>
       <h2>Let's make something <em>good</em> together.</h2>
       <div class="email-row">
-        <span id="email">your.email@example.com</span>
+        <span id="email">adibasaadullah@gmail.com</span>
         <button class="copy" type="button" id="copy">Copy email</button>
       </div>
       <div class="contact-links">
-        <a href="https://www.linkedin.com/">LinkedIn ↗</a>
+        <a href="https://www.linkedin.com/in/adiba-saadullah" target="_blank" rel="noopener">LinkedIn ↗</a>
         <a href="resume.pdf">Resume ↗</a>
         <a href="#top">Back to top ↑</a>
       </div>
@@ -401,6 +419,9 @@
       li.addEventListener('focus', function () { show(li.dataset.k); });
     });
     show('posters');
+    document.querySelectorAll('.pc-link').forEach(function (a) {
+      a.addEventListener('click', function (e) { e.stopPropagation(); if (a.dataset.k) show(a.dataset.k); });
+    });
 
     // Copy email
     var copyBtn = document.getElementById('copy');
