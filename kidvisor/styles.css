@@ -701,3 +701,8 @@ img.comp-bark, img.comp-aura { width: 48px !important; }
   .logo-img { height: 26px; }
 }
 .cs-head-text > .chapter-num { align-self: flex-start; }
+/* v4 tweaks */
+img.comp-helmit { height: 48px !important; width: 48px !important; margin-block: 0; border-radius: 0; }
+.comp > img.comp-logo { align-self: flex-start; }
+.expert-art { width: 200px; height: 200px; }
+p, li { text-wrap: pretty; }
