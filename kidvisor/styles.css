@@ -706,3 +706,9 @@ img.comp-helmit { height: 48px !important; width: 48px !important; margin-block:
 .comp > img.comp-logo { align-self: flex-start; }
 .expert-art { width: 200px; height: 200px; }
 p, li { text-wrap: pretty; }
+/* FigJam board button */
+.board-btn { justify-self: start; display: inline-flex; align-items: center; gap: 8px; padding: 10px 16px; border-radius: 999px; border: 1.5px solid var(--sky); background: var(--cloud); color: var(--navy); font: 800 14px/1 var(--font-display); cursor: pointer; transition: background-color .2s var(--ease), color .2s var(--ease); }
+.board-btn svg { width: 16px; height: 16px; }
+.board-btn:hover, .board-btn:focus-visible { background: var(--sky); color: var(--white); }
+.lightbox.wide { overflow: auto; }
+.lightbox.wide img { max-width: min(1800px, 100%); }

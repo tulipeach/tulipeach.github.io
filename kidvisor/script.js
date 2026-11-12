@@ -154,11 +154,13 @@ document.getElementById("scr-next").addEventListener("click", () => show(current
 show(current);
 
 // ---------- 5. Click process images to enlarge ----------
-document.querySelectorAll(".zoomable").forEach((el) => {
+document.querySelectorAll(".zoomable, [data-zoom]").forEach((el) => {
   el.addEventListener("click", () => {
+    const src = el.dataset.zoom || el.src;
+    const alt = el.dataset.alt || el.alt || "";
     const box = document.createElement("div");
-    box.className = "lightbox";
-    box.innerHTML = `<button class="lightbox-close" aria-label="Close">×</button><img src="${el.src}" alt="${el.alt}">`;
+    box.className = "lightbox" + (el.dataset.zoom ? " wide" : "");
+    box.innerHTML = `<button class="lightbox-close" aria-label="Close">×</button><img src="${src}" alt="${alt}">`;
     const close = () => { box.remove(); document.removeEventListener("keydown", esc); };
     const esc = (e) => { if (e.key === "Escape") close(); };
     box.addEventListener("click", close);
