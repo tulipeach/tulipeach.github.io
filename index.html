@@ -279,8 +279,8 @@
         <div class="play-intro">
           <span class="label">Playground</span>
           <h2>Other ways <em>I create</em></h2>
-          <p>Posters, teaching, photos and words. The parts of me that don't fit neatly on a resume, but shape how I work.</p>
-          <div class="preview" id="preview" aria-hidden="true">
+          <p>Posters, teaching, photos and words. The parts of me that shape how I work.</p>
+          <div class="preview" id="preview" role="region" aria-label="Playground preview">
             <div class="pv" data-k="posters" style="--p:#7B1F33"><b>Campaign posters</b><span>Add your SFJ posters here</span></div>
             <div class="pv" data-k="msa" style="--p:#2F5D50"><b>Social posts</b><span>Add your MSA posts here</span></div>
             <div class="pv" data-k="visual" style="--p:#C9A27A"><b>Visual design</b><span>Add your INFO 362 work here</span></div>
@@ -306,7 +306,7 @@
             <span class="label">About me</span>
             <h2 class="about-hook">I turn messy problems into simple, <em>human-centered</em> solutions using data, design and product thinking.</h2>
             <p class="about-sub">Work that makes a real difference for people is what drives me.</p>
-            <svg class="untangle" id="untangle" viewBox="0 0 600 70" preserveAspectRatio="none" aria-hidden="true"><path id="untangle-path"/><path id="untangle-ball"/><circle id="untangle-dot" r="5"/></svg>
+            <svg class="untangle" id="untangle" role="button" tabindex="0" aria-label="Replay the unraveling thread animation" viewBox="0 0 600 70" preserveAspectRatio="none" aria-hidden="true"><path id="untangle-path"/><path id="untangle-ball"/><circle id="untangle-dot" r="5"/></svg>
             <ol class="bring">
               <li><span class="bn">01</span><p>I make complicated things simple and beautiful, whether it's a classroom lesson for young kids or a handoff guide for a nonprofit team to use.</p></li>
               <li><span class="bn">02</span><p>I can take an idea from research to real: talking to users, finding the patterns, and designing and testing until it works.</p></li>
@@ -325,9 +325,9 @@
             <h3>Experience</h3>
             <ol>
               <li><span class="when">May–Oct 2026</span><span class="what"><b>Data and Operations Intern</b>MAPS Community Services</span></li>
+              <li><span class="when">Sep 2026–now</span><span class="what"><b>PR, MSA Volunteer Corps</b>Muslim Student Association, UW</span></li>
               <li><span class="when">Jul 2026–now</span><span class="what"><b>Research Assistant</b>Systematic review team, UW</span></li>
               <li><span class="when">Oct 2024–now</span><span class="what"><b>Teacher</b>Rahma Academy, MAPS</span></li>
-              <li><span class="when">Fall 2026–now</span><span class="what"><b>PR, MSA Volunteer Corps</b>Muslim Student Association, UW</span></li>
               <li><span class="when">Before UW</span><span class="what"><b>Marketing Manager, Interim President</b>Students for Justice, Bellevue College</span></li>
             </ol>
           </div>
@@ -440,18 +440,12 @@
     function flip() {
       if (busy) return; busy = true;
       var top = cards[idx];
-      top.classList.add('out');           // slides off to the right and fades
-      setTimeout(function () {
-        top.style.transition = 'none';    // move it to the back while invisible
-        top.classList.remove('out');
-        idx = (idx + 1) % cards.length;
-        layout();
-        top.style.opacity = '0';
-        void top.offsetWidth;
-        top.style.transition = '';
-        top.style.opacity = '';           // then fade it in at the back
-        setTimeout(function () { busy = false; }, 200);
-      }, 400);
+      idx = (idx + 1) % cards.length;
+      layout();                       // the other cards move forward
+      top.style.zIndex = cards.length + 1;
+      top.classList.add('shuffle');   // the top card slides out to the right, then tucks in at the back
+      setTimeout(function () { top.style.zIndex = 0; }, 330);
+      setTimeout(function () { top.classList.remove('shuffle'); layout(); busy = false; }, 760);
     }
     stack.addEventListener('click', flip);
     stack.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); flip(); } });
@@ -480,6 +474,35 @@
     var rail = document.getElementById('rail');
     document.querySelectorAll('.scroller-btns .arrow').forEach(function (b) {
       b.addEventListener('click', function () { rail.scrollBy({ left: +b.dataset.dir * rail.clientWidth * 0.6, behavior: 'smooth' }); });
+    });
+
+    var pvsAll;
+    // Playground galleries: add images as images/play/posters-1.jpg, posters-2.jpg and so on
+    pvsAll = document.querySelectorAll('.pv');
+    pvsAll.forEach(function (pv) {
+      var k = pv.dataset.k, imgs = [], n = 1;
+      var nav = document.createElement('div'); nav.className = 'pv-nav';
+      nav.innerHTML = '<button type="button" class="pv-btn" data-d="-1" aria-label="Previous image">‹</button><span class="pv-count"></span><button type="button" class="pv-btn" data-d="1" aria-label="Next image">›</button>';
+      var cur = 0;
+      function go(i) {
+        cur = (i + imgs.length) % imgs.length;
+        imgs.forEach(function (im, j) { im.classList.toggle('on', j === cur); });
+        nav.querySelector('.pv-count').textContent = (cur + 1) + ' / ' + imgs.length;
+      }
+      nav.addEventListener('click', function (e) { var b = e.target.closest('.pv-btn'); if (b) go(cur + Number(b.dataset.d)); });
+      (function tryNext() {
+        var im = new Image();
+        im.alt = pv.querySelector('b').textContent + ' ' + n;
+        im.className = 'pv-img';
+        im.onload = function () {
+          pv.appendChild(im); imgs.push(im); pv.classList.add('has-img');
+          if (imgs.length === 1) go(0);
+          if (imgs.length === 2) pv.appendChild(nav);
+          if (imgs.length > 1) go(cur);
+          n++; if (n <= 10) tryNext();
+        };
+        im.src = 'images/play/' + k + '-' + n + '.jpg';
+      })();
     });
 
     // Playground preview (click or tap)
@@ -595,6 +618,22 @@
       }, { threshold: 1 });
       uo.observe(un);
     } else { drawYarn(1); }
+    function replayYarn() {
+      if (reduce || un.dataset.playing) return;
+      un.dataset.playing = '1';
+      var start = null, dur = 2800;
+      drawYarn(0);
+      setTimeout(function () {
+        requestAnimationFrame(function step(ts) {
+          if (start === null) start = ts;
+          var k = Math.min((ts - start) / dur, 1), ease = k < .5 ? 2 * k * k : 1 - Math.pow(-2 * k + 2, 2) / 2;
+          drawYarn(ease);
+          if (k < 1) requestAnimationFrame(step); else delete un.dataset.playing;
+        });
+      }, 450);
+    }
+    un.addEventListener('click', replayYarn);
+    un.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); replayYarn(); } });
 
     // Headline reveals: words rise into place
     var heads = document.querySelectorAll('.sec-head h2, .about-hook');
@@ -618,11 +657,11 @@
     } else { heads.forEach(function (h) { h.classList.add('up'); }); }
 
     // Suggest dark mode the first time someone reaches the bottom
-    var seen = false; try { seen = localStorage.getItem('as-dark-tip') === '1'; } catch (e) {}
+    var seen = false; try { seen = sessionStorage.getItem('as-dark-tip') === '1'; } catch (e) {}
     function atBottom() {
-      if (seen || scrollY + innerHeight < document.documentElement.scrollHeight - 30) return;
+      if (seen || scrollY + innerHeight < document.documentElement.scrollHeight - 120) return;
       seen = true; removeEventListener('scroll', atBottom);
-      try { localStorage.setItem('as-dark-tip', '1'); } catch (e) {}
+      try { sessionStorage.setItem('as-dark-tip', '1'); } catch (e) {}
       if (root.getAttribute('data-theme') === 'dark') return;
       var tip = document.createElement('button');
       tip.type = 'button'; tip.className = 'try-me'; tip.setAttribute('aria-label', 'Try dark mode');
