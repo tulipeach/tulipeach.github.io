@@ -499,3 +499,86 @@ main { position: relative; z-index: 1; background: var(--bg); border-radius: 0 0
 .pcard .face { position: relative; }
 .pcard .face img, .about-photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
 .about-photo { position: relative; border-style: solid; }
+
+/* =========================================================
+   v8: smoother flip, arriving cards, new About, compact tools
+   ========================================================= */
+
+/* Hero flip: slide off cleanly, then fade in at the back */
+.pcard.out { transform: translate(-70%, 14px) rotate(-12deg); opacity: 0; transition: transform .42s cubic-bezier(.55,0,.75,.4), opacity .36s ease-in; }
+.pcard.nudge { animation: nudge 1.1s var(--ease); }
+@keyframes nudge {
+  0%, 100% { transform: translate(0, 0) rotate(-2deg) scale(1); }
+  35% { transform: translate(-14px, -4px) rotate(-6deg) scale(1); }
+  65% { transform: translate(3px, 0) rotate(-1deg) scale(1); }
+}
+
+/* Work deck: more scroll room, and each card's content arrives as it slides up */
+.deck { gap: 46vh; }
+.pcase { --e: 1; }
+.pcase-visual { transform: translateY(calc((1 - var(--e)) * 70px)); opacity: calc(.35 + var(--e) * .65); }
+.pcase-text { opacity: calc(var(--e) * 1.4 - .4); transform: translateY(calc((1 - var(--e)) * 24px)); }
+@media (max-width: 900px) {
+  .deck { gap: 24px; }
+  .pcase-visual, .pcase-text { transform: none; opacity: 1; }
+}
+
+/* Read case study: a clear pill button */
+.pcta:not(.soon) {
+  align-self: flex-start;
+  padding: 12px 20px 12px 22px; border-radius: 999px;
+  background: color-mix(in srgb, var(--ink) 16%, transparent);
+  border: 1px solid color-mix(in srgb, var(--ink) 40%, transparent);
+  backdrop-filter: blur(6px);
+  transition: background .3s var(--ease), color .3s var(--ease), border-color .3s var(--ease);
+}
+.pcase:hover .pcta:not(.soon) { background: var(--ink); color: var(--c); border-color: var(--ink); }
+.pcase.light:hover .pcta:not(.soon) { color: #fff; }
+
+/* About */
+.about-head { display: flex; flex-direction: column; gap: 18px; margin-bottom: 64px; max-width: 980px; }
+.about-hook { font-family: var(--serif); font-weight: 400; font-size: clamp(36px, 4.4vw, 62px); line-height: 1.08; letter-spacing: -.015em; }
+.about-hook em { font-style: italic; color: var(--accent); }
+.about-sub { font-size: clamp(18px, 1.6vw, 21px); color: var(--muted); }
+
+.about-grid { grid-template-columns: minmax(220px, 300px) 1fr 1fr; gap: 56px; align-items: start; }
+.about-photo-wrap { margin: 0; position: relative; align-self: end; }
+.about-photo-wrap::before { content: ""; position: absolute; inset: 0; transform: translate(14px, 14px); border-radius: var(--r-md); background: var(--accent); opacity: .9; }
+.about-photo-wrap .about-photo { margin: 0; max-width: none; width: 100%; aspect-ratio: 3 / 4; border: 0; background: linear-gradient(160deg, var(--accent-soft), var(--card)); }
+
+.about-text { gap: 28px; }
+.bring { list-style: none; padding: 0; margin: 0; border-top: 1px solid var(--line); }
+.bring li { display: grid; grid-template-columns: 52px 1fr; gap: 12px; padding: 20px 0; border-bottom: 1px solid var(--line); }
+.bring .bn { font-family: var(--serif); font-size: 28px; line-height: 1; color: var(--accent); }
+.bring p { font-size: 17px; line-height: 1.6; max-width: none; }
+.about-outside { font-size: 16px !important; color: var(--muted); font-style: italic; }
+
+.exp ol:last-child { margin-bottom: 0; }
+
+@media (max-width: 1100px) {
+  .about-grid { grid-template-columns: 260px 1fr; }
+  .exp { grid-column: 1 / -1; }
+}
+@media (max-width: 640px) {
+  .about-grid { grid-template-columns: 1fr; gap: 40px; }
+  .about-photo-wrap { max-width: 280px; align-self: start; }
+  .about-head { margin-bottom: 40px; }
+}
+
+/* Tools: compact 2 x 2 cards with logo chips */
+.skills { margin-top: 72px; }
+.tool-groups { grid-template-columns: 1fr 1fr !important; gap: 16px; align-items: start; }
+.tg { display: block; padding: 22px 24px; border: 1px solid var(--line); border-radius: var(--r-md); background: var(--card); }
+.tg h4 { margin: 0 0 14px; }
+.tg .tool-grid, .tg-design .tool-grid { display: flex !important; flex-wrap: wrap; gap: 8px; }
+.tg .tool-grid li {
+  width: auto !important; display: inline-flex; align-items: center; gap: 8px;
+  padding: 7px 14px 7px 8px; border-radius: 999px; font-size: 14px; text-align: left;
+  background: var(--bg); border: 1px solid var(--line);
+}
+.tg .tool-grid li:hover { transform: translateY(-2px); }
+.tg .tool-grid i, .tg .tool-grid i:has(img) { width: 24px; height: 24px; border-radius: 6px; font-size: 11px; }
+.methods { margin-top: 20px; }
+@media (max-width: 640px) {
+  .tool-groups { grid-template-columns: 1fr !important; }
+}
