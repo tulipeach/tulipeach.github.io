@@ -377,7 +377,7 @@ main { position: relative; z-index: 1; background: var(--bg); border-radius: 0 0
 .hero-text > *:nth-child(4) { animation-delay: .24s; }
 .stack-wrap { animation: rise 1s .2s var(--ease) both; }
 @media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+  *, *::before, *::after { animation: none !important; transition-property: opacity, color, background-color, border-color !important; transition-duration: .3s !important; scroll-behavior: auto !important; }
   .pcase { transform: none !important; filter: none !important; }
 }
 
@@ -745,3 +745,88 @@ main { position: relative; z-index: 1; background: var(--bg); border-radius: 0 0
 @keyframes pulse { 0% { box-shadow: 0 0 0 0 color-mix(in srgb, var(--accent) 55%, transparent); } 100% { box-shadow: 0 0 0 14px transparent; } }
 @media (max-width: 640px) { .dark-tip { left: 16px; right: 16px; border-radius: 18px; } .dark-tip::before { right: 22px; } }
 @media (prefers-reduced-motion: reduce) { .rain, .tl-hint svg, .theme.pulse { animation: none; } }
+
+/* =========================================================
+   v11
+   ========================================================= */
+/* Brand accents used everywhere */
+:root { --sky: #4F9BD0; --coral: #E0785C; --sage: #5E9E72; --rose: #D9768F; }
+[data-c="design"] { --cc: var(--rose); }
+[data-c="product"] { --cc: var(--sky); }
+[data-c="data"] { --cc: var(--sage); }
+[data-c="code"] { --cc: var(--coral); }
+
+/* Flip: slide a little to the right, then fade in at the back */
+.pcard.out { transform: translate(38%, 10px) rotate(9deg); opacity: 0; transition: transform .4s cubic-bezier(.4,0,.7,.4), opacity .34s ease-in; }
+@media (prefers-reduced-motion: reduce) { .pcard.out { transform: none; } }
+
+/* Ticker: very slightly bigger */
+.ticker-track span { font-size: clamp(23px, 2.42vw, 38px); }
+
+/* Work deck: a bit faster */
+.deck { gap: 34vh; }
+@media (max-width: 900px) { .deck { gap: 24px; } }
+
+/* Research cards: image on top, question, meta, button */
+.rcard { padding: 0; gap: 0; min-height: 0; }
+.rcard::before { z-index: 2; height: 5px; }
+.rimg { order: -1; margin: 0; height: 170px; background: color-mix(in srgb, var(--r) 14%, var(--card)); display: grid; place-items: center; }
+.rimg::before { display: none; }
+.rimg img { position: absolute; inset: 0; opacity: 1; filter: none; object-position: center top; }
+.rcard:hover .rimg img { opacity: 1; }
+.rill { width: 46%; height: auto; }
+.rill rect, .rill circle { fill: color-mix(in srgb, var(--r) 20%, var(--card)); stroke: var(--r); stroke-width: 1.4; }
+.rill rect.top { fill: var(--card); }
+.rill .ln { fill: none; stroke: var(--r); stroke-width: 1.4; stroke-linecap: round; opacity: .7; }
+.rbody { padding: 22px 26px 26px; display: flex; flex-direction: column; gap: 12px; flex: 1; }
+.rcard h3 { font-size: 20px; }
+.rcard .rmeta { margin-top: auto; padding-top: 4px; }
+.rmore { margin-top: 4px; background: var(--r); color: #fff; border-color: var(--r); }
+.rmore:hover { color: #fff; border-color: var(--r); background: color-mix(in srgb, var(--r) 82%, #000); }
+.rcard.ghost .rbody { padding: 30px 26px; }
+.rcard.ghost { padding-bottom: 0; }
+@media (max-width: 640px) { .rimg { margin: 0; height: 150px; } .rbody { padding: 20px 22px 22px; } }
+
+/* Playground: active item */
+.play-list li.active .pl-t { color: var(--accent); font-style: italic; }
+.play-list li.active { padding-left: 22px; }
+.play-list li.active::before { content: ""; position: absolute; left: 4px; top: 50%; width: 8px; height: 8px; margin-top: -4px; border-radius: 50%; background: var(--accent); }
+.play-list li { position: relative; }
+
+/* About: yarn line is the divider, bigger hook */
+.about-hook { font-size: clamp(34px, 3.75vw, 56px); }
+.about-sub { font-size: clamp(17px, 1.38vw, 20px); }
+.untangle { height: 64px; margin: 8px 0 10px; display: block; }
+.untangle path { stroke-width: 2; opacity: 1; }
+.bring { border-top: 0; }
+.bring li:first-child { padding-top: 6px; }
+
+/* UW banner under Education */
+.uw-banner { margin: 40px 0 0; border-radius: var(--r-md); overflow: hidden; aspect-ratio: 4 / 1; background: #EDE6E8; }
+.uw-banner img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+/* Tools legend: no outline, a soft tint instead */
+.tool-legend button { border: 0; background: transparent; padding: 7px 14px 7px 12px; }
+.tool-legend button:hover, .tool-legend button:focus-visible, .tool-legend button[aria-pressed="true"] { background: color-mix(in srgb, var(--cc) 16%, transparent); }
+.tool-legend i { width: 10px; height: 10px; }
+
+/* "try me" for dark mode */
+.try-me { position: fixed; z-index: 60; display: flex; align-items: flex-start; gap: 2px; background: none; border: 0; padding: 0; cursor: pointer; color: var(--accent); font-family: var(--serif); font-style: italic; font-size: 19px; opacity: 0; transform: translateY(-4px); transition: opacity .5s var(--ease), transform .5s var(--ease); }
+.try-me.show { opacity: 1; transform: none; }
+.try-me svg { width: 36px; height: 26px; margin-top: -2px; order: 2; }
+.try-me svg path { fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+.try-me span { margin-top: 14px; }
+.try-me:hover { color: var(--ink); }
+
+/* Back to top: a little more noticeable */
+.contact-links { align-items: center; }
+.totop { display: inline-flex; align-items: center; gap: 10px; padding: 8px 18px 8px 8px; border: 1px solid rgba(244,239,233,.28); border-radius: 999px; }
+.tt-ic { width: 30px; height: 30px; border-radius: 50%; display: grid; place-items: center; background: #F4EFE9; color: #17120F; font-size: 15px; transition: transform .3s var(--ease); }
+.totop:hover { border-color: #E58C9C; }
+.totop:hover .tt-ic { transform: translateY(-3px); background: #E58C9C; }
+
+/* Copy email: checkmark state */
+.copy .cp-label { display: inline-flex; align-items: center; gap: 6px; }
+.copy svg { width: 16px; height: 16px; fill: none; stroke: currentColor; stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; stroke-dasharray: 24; stroke-dashoffset: 24; animation: draw .4s .05s ease-out forwards; }
+.copy.copied { background: #9FD4AE; }
+#untangle-ball { fill: none; stroke: var(--accent); stroke-width: 1.1; stroke-linejoin: round; opacity: .9; }
