@@ -88,7 +88,7 @@
               <figcaption><b>Creative</b><span>An endless rush of ideas, in every medium</span><a href="#about" class="pc-link">Explore →</a></figcaption>
             </figure>
           </div>
-          <p class="stack-hint"><span id="stack-count">1 / 5</span> · Click to flip</p>
+          <p class="stack-hint" aria-live="polite"><span id="stack-count">1 / 5</span> · Click to flip</p>
         </div>
       </div>
 
@@ -110,7 +110,7 @@
 
         <div class="deck">
           <!-- Kidvisor -->
-          <article class="pcase light" style="--c:#C9E6F7;--c2:#EAF6FD;--ink:#0E3550;--sub:rgba(14,53,80,.76)">
+          <article class="pcase light" style="--c:#9FD3F2;--c2:#D3ECFB;--dc:#C9E6F7;--dc2:#EAF6FD;--ink:#0B3049;--sub:rgba(11,48,73,.8)">
             <a class="pcase-link" href="kidvisor/index.html" aria-label="Read the Kidvisor case study"></a>
             <div class="pcase-text">
               <span class="pnum">01 · UX research and design · 2026</span>
@@ -127,7 +127,7 @@
           </article>
 
           <!-- MAPS -->
-          <article class="pcase light" style="--c:#F5D2C8;--c2:#FCEDE8;--ink:#5A1C12;--sub:rgba(90,28,18,.76)">
+          <article class="pcase light" style="--c:#F2AE98;--c2:#F9D9CD;--dc:#F5D2C8;--dc2:#FCEDE8;--ink:#561A10;--sub:rgba(86,26,16,.8)">
             <a class="pcase-link" href="maps/index.html" aria-label="Read the MAPS Community Services case study"></a>
             <div class="pcase-text">
               <span class="pnum">02 · Data and operations internship · 2026</span>
@@ -144,7 +144,7 @@
           </article>
 
           <!-- GSU -->
-          <article class="pcase light gsu" style="--c:#CFE6D4;--c2:#ECF6EE;--ink:#1D3D27;--sub:rgba(29,61,39,.76)">
+          <article class="pcase light gsu" style="--c:#A8D6B4;--c2:#D8EEDD;--dc:#CFE6D4;--dc2:#ECF6EE;--ink:#173823;--sub:rgba(23,56,35,.8)">
             <div class="pcase-text">
               <span class="pnum">03 · Product management · 2026</span>
               <h3>GSU Course Registration</h3>
@@ -162,7 +162,7 @@
           </article>
 
           <!-- Reham's -->
-          <article class="pcase light" style="--c:#F6D0D8;--c2:#FCEDF0;--ink:#3A1520;--sub:rgba(58,21,32,.76)">
+          <article class="pcase light" style="--c:#F2B0BE;--c2:#FAD9E0;--dc:#F6D0D8;--dc2:#FCEDF0;--ink:#3A1520;--sub:rgba(58,21,32,.8)">
             <div class="pcase-text">
               <span class="pnum">04 · Web development · In progress</span>
               <h3>Reham's Cake Gallery</h3>
@@ -198,7 +198,7 @@
           </div>
         </div>
       </div>
-      <div class="rail" id="rail">
+      <div class="rail" id="rail" role="region" aria-label="Research projects" tabindex="0">
         <article class="rcard" style="--r:#7B1F33">
           <span class="rtag">Systematic review · In progress</span>
           <h3>How do researchers study parents, children and AI learning together?</h3>
@@ -332,31 +332,38 @@
               <li><span class="when">2028</span><span class="what"><b>B.S. Informatics</b>University of Washington</span></li>
               <li><span class="when">Before UW</span><span class="what"><b>Associate degree, Informatics</b>Bellevue College</span></li>
             </ol>
+            <!-- Optional: upload a campus photo as images/me/uw.jpg and it will show here -->
+            <figure class="seattle" aria-label="Seattle, Washington">
+              <div class="rain" aria-hidden="true"></div>
+              <img src="images/me/uw.jpg" alt="University of Washington campus" onerror="this.remove()">
+              <figcaption>Seattle, WA</figcaption>
+            </figure>
           </div>
         </div>
 
         <div class="skills">
           <h3>Tools I use</h3>
-          <div class="tool-legend" id="tool-legend">
-            <button type="button" data-c="design"><i></i>Design</button><button type="button" data-c="product"><i></i>Product and teamwork</button><button type="button" data-c="data"><i></i>Data</button><button type="button" data-c="code"><i></i>Code</button>
+          <div class="tool-legend" id="tool-legend" role="group" aria-label="Highlight tools by category">
+            <span class="tl-hint" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 11V5.5a1.5 1.5 0 0 1 3 0V11m0-1.5a1.5 1.5 0 0 1 3 0V11m0-.5a1.5 1.5 0 0 1 3 0V15a6 6 0 0 1-6 6h-1a6 6 0 0 1-5-2.7L3.6 14a1.5 1.5 0 0 1 2.4-1.8L9 15" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Hover a group</span>
+            <button type="button" data-c="design" aria-pressed="false"><i></i>Design</button><button type="button" data-c="product" aria-pressed="false"><i></i>Product and teamwork</button><button type="button" data-c="data" aria-pressed="false"><i></i>Data</button><button type="button" data-c="code" aria-pressed="false"><i></i>Code</button>
           </div>
-          <ul class="tools-all" id="tools-all">
-              <li data-c="design"><img src="images/tools/figma.png" alt=""><b>Figma / FigJam</b><small>Design</small></li>
-              <li data-c="design"><img src="images/tools/canva.png" alt=""><b>Canva</b><small>Design</small></li>
-              <li data-c="design"><img src="images/tools/illustrator.png" alt=""><b>Illustrator</b><small>Design</small></li>
-              <li data-c="design"><img src="images/tools/photoshop.png" alt=""><b>Photoshop</b><small>Design</small></li>
-              <li data-c="design"><img src="images/tools/indesign.png" alt=""><b>InDesign</b><small>Design</small></li>
-              <li data-c="product"><img src="images/tools/jira.png" alt=""><b>Jira</b><small>Product</small></li>
-              <li data-c="product"><img src="images/tools/notion.png" alt=""><b>Notion</b><small>Product</small></li>
-              <li data-c="product"><img src="images/tools/miro.png" alt=""><b>Miro</b><small>Product</small></li>
-              <li data-c="data"><img src="images/tools/r.png" alt=""><b>R</b><small>Data</small></li>
-              <li data-c="data"><img src="images/tools/sql.png" alt=""><b>SQL</b><small>Data</small></li>
-              <li data-c="data"><img src="images/tools/excel.png" alt=""><b>Excel</b><small>Data</small></li>
-              <li data-c="code"><img src="images/tools/html.png" alt=""><b>HTML</b><small>Code</small></li>
-              <li data-c="code"><img src="images/tools/css.png" alt=""><b>CSS</b><small>Code</small></li>
-              <li data-c="code"><img src="images/tools/javascript.png" alt=""><b>JavaScript</b><small>Code</small></li>
-              <li data-c="code"><img src="images/tools/vscode.png" alt=""><b>VS Code</b><small>Code</small></li>
-              <li data-c="code"><img src="images/tools/git.png" alt=""><b>Git / GitHub</b><small>Code</small></li>
+          <ul class="tools-all" id="tools-all" aria-label="Tools I use">
+              <li data-c="design"><img src="images/tools/figma.png" alt=""><b>Figma / FigJam</b><span class="sr-only">, Design</span></li>
+              <li data-c="design"><img src="images/tools/canva.png" alt=""><b>Canva</b><span class="sr-only">, Design</span></li>
+              <li data-c="design"><img src="images/tools/illustrator.png" alt=""><b>Illustrator</b><span class="sr-only">, Design</span></li>
+              <li data-c="design"><img src="images/tools/photoshop.png" alt=""><b>Photoshop</b><span class="sr-only">, Design</span></li>
+              <li data-c="design"><img src="images/tools/indesign.png" alt=""><b>InDesign</b><span class="sr-only">, Design</span></li>
+              <li data-c="product"><img src="images/tools/jira.png" alt=""><b>Jira</b><span class="sr-only">, Product and teamwork</span></li>
+              <li data-c="product"><img src="images/tools/notion.png" alt=""><b>Notion</b><span class="sr-only">, Product and teamwork</span></li>
+              <li data-c="product"><img src="images/tools/miro.png" alt=""><b>Miro</b><span class="sr-only">, Product and teamwork</span></li>
+              <li data-c="data"><img src="images/tools/r.png" alt=""><b>R</b><span class="sr-only">, Data</span></li>
+              <li data-c="data"><img src="images/tools/sql.png" alt=""><b>SQL</b><span class="sr-only">, Data</span></li>
+              <li data-c="data"><img src="images/tools/excel.png" alt=""><b>Excel</b><span class="sr-only">, Data</span></li>
+              <li data-c="code"><img src="images/tools/html.png" alt=""><b>HTML</b><span class="sr-only">, Code</span></li>
+              <li data-c="code"><img src="images/tools/css.png" alt=""><b>CSS</b><span class="sr-only">, Code</span></li>
+              <li data-c="code"><img src="images/tools/javascript.png" alt=""><b>JavaScript</b><span class="sr-only">, Code</span></li>
+              <li data-c="code"><img src="images/tools/vscode.png" alt=""><b>VS Code</b><span class="sr-only">, Code</span></li>
+              <li data-c="code"><img src="images/tools/git.png" alt=""><b>Git / GitHub</b><span class="sr-only">, Code</span></li>
           </ul>
           <p class="methods"><b>AI tools</b> Claude, ChatGPT and Gemini for research and productivity</p>
         </div>
@@ -380,7 +387,7 @@
       </div>
       <div class="foot">
         <span>© <span id="year">2026</span> Adiba Saadullah</span>
-        <span>Designed and coded by me on rainy days, with Claude Opus</span>
+        <span>Designed and coded by me with Claude Opus</span>
       </div>
     </div>
   </footer>
@@ -397,7 +404,7 @@
     }
     var saved = null;
     try { saved = localStorage.getItem('as-theme'); } catch (e) {}
-    setTheme(saved || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'));
+    setTheme(saved || 'light');
     themeBtn.addEventListener('click', function () {
       var t = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
       setTheme(t);
@@ -505,12 +512,18 @@
     dlg.addEventListener('click', function (e) { if (e.target === dlg) closeDlg(); });
     dlg.addEventListener('cancel', function (e) { e.preventDefault(); closeDlg(); });
 
-    // Tools legend: highlight one category
-    var tAll = document.getElementById('tools-all');
-    document.querySelectorAll('#tool-legend button').forEach(function (b) {
-      var on = function () { tAll.dataset.hl = b.dataset.c; }, off = function () { delete tAll.dataset.hl; };
-      b.addEventListener('mouseenter', on); b.addEventListener('focus', on);
-      b.addEventListener('mouseleave', off); b.addEventListener('blur', off);
+    // Tools legend: highlight one category (hover, focus or tap)
+    var tAll = document.getElementById('tools-all'), lbtns = document.querySelectorAll('#tool-legend button');
+    function hl(c) {
+      if (c) tAll.dataset.hl = c; else delete tAll.dataset.hl;
+      lbtns.forEach(function (x) { x.setAttribute('aria-pressed', String(x.dataset.c === c)); });
+    }
+    lbtns.forEach(function (b) {
+      b.addEventListener('mouseenter', function () { hl(b.dataset.c); });
+      b.addEventListener('focus', function () { hl(b.dataset.c); });
+      b.addEventListener('mouseleave', function () { hl(null); });
+      b.addEventListener('blur', function () { hl(null); });
+      b.addEventListener('click', function () { hl(tAll.dataset.hl === b.dataset.c ? null : b.dataset.c); });
     });
 
     var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -535,12 +548,23 @@
       unDot.setAttribute('cx', W - 10); unDot.setAttribute('cy', H / 2);
       un.style.setProperty('--u', p.toFixed(3));
     }
-    function untangle() {
-      var r = un.getBoundingClientRect();
-      var p = reduce ? 1 : Math.min(Math.max((innerHeight * 0.92 - r.top) / (innerHeight * 0.55), 0), 1);
-      drawLine(p * p * (3 - 2 * p));
-    }
-    addEventListener('scroll', untangle, { passive: true }); addEventListener('resize', untangle); untangle();
+    drawLine(reduce ? 1 : 0);
+    if (!reduce && 'IntersectionObserver' in window) {
+      var uo = new IntersectionObserver(function (es) {
+        if (!es[0].isIntersecting) return;
+        uo.disconnect();
+        var start = null, dur = 2600;
+        setTimeout(function () {
+          requestAnimationFrame(function step(ts) {
+            if (start === null) start = ts;
+            var k = Math.min((ts - start) / dur, 1), e = k < .5 ? 4 * k * k * k : 1 - Math.pow(-2 * k + 2, 3) / 2;
+            drawLine(e);
+            if (k < 1) requestAnimationFrame(step);
+          });
+        }, 350);
+      }, { threshold: 1 });
+      uo.observe(un);
+    } else { drawLine(1); }
 
     // Headline reveals: words rise into place
     var heads = document.querySelectorAll('.sec-head h2, .about-hook');
@@ -575,6 +599,32 @@
         btn.addEventListener('mouseleave', function () { btn.style.transform = ''; });
       });
     }
+
+    // Suggest dark mode the first time someone reaches the bottom
+    var seen = false; try { seen = localStorage.getItem('as-dark-tip') === '1'; } catch (e) {}
+    function atBottom() {
+      if (seen || scrollY + innerHeight < document.documentElement.scrollHeight - 30) return;
+      seen = true; removeEventListener('scroll', atBottom);
+      try { localStorage.setItem('as-dark-tip', '1'); } catch (e) {}
+      if (root.getAttribute('data-theme') === 'dark') return;
+      var tip = document.createElement('div');
+      tip.className = 'dark-tip'; tip.setAttribute('role', 'status');
+      tip.innerHTML = '<span>Psst, this site looks even better in dark mode.</span><button type="button" class="dt-try">Try it</button><button type="button" class="dt-x" aria-label="Dismiss">×</button>';
+      document.body.appendChild(tip);
+      var r = themeBtn.getBoundingClientRect();
+      if (innerWidth > 640) {
+        tip.style.right = Math.max(16, innerWidth - r.right - 10) + 'px';
+        tip.style.setProperty('--arrow', (r.width / 2 + 4) + 'px');
+      }
+      themeBtn.classList.add('pulse');
+      requestAnimationFrame(function () { tip.classList.add('show'); });
+      var done = function () { tip.classList.remove('show'); themeBtn.classList.remove('pulse'); setTimeout(function () { tip.remove(); }, 400); };
+      tip.querySelector('.dt-try').addEventListener('click', function () { themeBtn.click(); done(); });
+      tip.querySelector('.dt-x').addEventListener('click', done);
+      themeBtn.addEventListener('click', done, { once: true });
+      setTimeout(done, 9000);
+    }
+    if (!seen) addEventListener('scroll', atBottom, { passive: true });
 
     // Reveal on scroll
     if ('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: reduce)').matches) {

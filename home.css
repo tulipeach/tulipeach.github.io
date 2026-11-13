@@ -665,5 +665,83 @@ main { position: relative; z-index: 1; background: var(--bg); border-radius: 0 0
   .split .w > span { transform: none; }
   .scribble path { stroke-dashoffset: 0; }
 }
-.about-photo-wrap { position: sticky; top: calc(var(--nav-h) + 40px); }
-@media (max-width: 900px) { .about-photo-wrap { position: relative; top: auto; } }
+
+/* =========================================================
+   v10
+   ========================================================= */
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+
+/* Headline reveals: room for italic letters like the f in "myself" */
+.split .w { padding-inline: .14em; margin-inline: -.14em; }
+
+/* Ticker: a bit bigger, first five phrases fit a laptop screen */
+.ticker-track span { font-size: clamp(22px, 2.3vw, 36px); padding-inline: 1.15vw; gap: 2.3vw; }
+
+/* Work cards: bolder pastels in light mode, softer pastels in dark mode */
+:root[data-theme="dark"] .pcase.light { background: linear-gradient(135deg, var(--dc, var(--c)) 0%, var(--dc2, var(--c2)) 100%); }
+
+/* Research cards: smaller, sans-serif questions */
+.rail { grid-auto-columns: min(380px, 82vw); gap: 18px; }
+.rcard { padding: 28px; gap: 14px; min-height: 340px; }
+.rcard h3 { font-family: var(--sans); font-weight: 600; font-size: 21px; line-height: 1.3; letter-spacing: -.01em; }
+.rcard p { font-size: 15px; }
+@media (max-width: 640px) { .rcard { padding: 24px; } .rcard h3 { font-size: 19px; } }
+
+/* Playground: paragraph spans the column, list fills the preview height */
+.play-intro > p { max-width: none; }
+.pl-t { font-size: clamp(32px, 3.1vw, 46px); }
+.play-list li { padding: 31px 8px; }
+
+/* About: two columns of equal height, nothing sticky */
+.about-top { grid-template-columns: 1.1fr 1fr; gap: clamp(40px, 5vw, 72px); align-items: stretch; }
+.about-main { gap: 16px; }
+.about-hook { font-size: clamp(32px, 3.3vw, 48px); }
+.about-sub { font-size: 18px; }
+.untangle { height: 56px; margin: 2px 0; }
+.bring li { padding: 16px 0; grid-template-columns: 48px 1fr; }
+.bring .bn { font-size: 26px; }
+.bring p, .about-outside { font-size: 16.5px; line-height: 1.6; }
+.about-photo-wrap { position: relative; top: auto; margin: 0 16px 16px 0; min-height: 520px; }
+.about-photo-wrap .about-photo { aspect-ratio: auto; height: 100%; }
+@media (max-width: 900px) {
+  .about-top { grid-template-columns: 1fr; }
+  .about-photo-wrap { min-height: 0; max-width: 380px; }
+  .about-photo-wrap .about-photo { aspect-ratio: 4 / 5; height: auto; }
+}
+
+/* Seattle card under Education */
+.seattle { position: relative; margin: 40px 0 0; height: 220px; border-radius: var(--r-md); overflow: hidden; background: linear-gradient(170deg, #4A5568 0%, #7B1F33 120%); }
+.seattle img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 1; }
+.seattle figcaption { position: absolute; left: 18px; bottom: 14px; z-index: 2; color: #fff; font-family: var(--serif); font-size: 26px; text-shadow: 0 2px 12px rgba(0,0,0,.35); }
+.rain { position: absolute; inset: -40px 0 0; background-image:
+  linear-gradient(105deg, transparent 48%, rgba(255,255,255,.35) 49%, rgba(255,255,255,.35) 50%, transparent 51%),
+  linear-gradient(105deg, transparent 48%, rgba(255,255,255,.2) 49%, rgba(255,255,255,.2) 50%, transparent 51%);
+  background-size: 22px 46px, 34px 70px; background-position: 0 0, 11px 20px; animation: rain .9s linear infinite; opacity: .7; }
+@keyframes rain { to { background-position: -9px 46px, 2px 90px; } }
+
+/* Tools: colored borders show the category, no labels */
+.tools-all li { border: 2px solid color-mix(in srgb, var(--cc) 55%, var(--line)); gap: 10px; padding: 20px 10px 16px; }
+.tools-all img { width: 44px; height: 44px; margin: 0; }
+.tools-all b { font-size: 14.5px; }
+.tools-all small { display: none; }
+.tools-all li:hover { border-color: var(--cc); }
+.tools-all[data-hl] li { opacity: .28; }
+.tools-all[data-hl="design"] li[data-c="design"], .tools-all[data-hl="product"] li[data-c="product"],
+.tools-all[data-hl="data"] li[data-c="data"], .tools-all[data-hl="code"] li[data-c="code"] { background: color-mix(in srgb, var(--cc) 12%, var(--card)); }
+.tool-legend { align-items: center; gap: 10px; }
+.tl-hint { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; color: var(--muted); margin-right: 6px; }
+.tl-hint svg { width: 18px; height: 18px; animation: tap 2.4s ease-in-out infinite; }
+@keyframes tap { 0%, 60%, 100% { transform: none; } 70% { transform: translateY(-3px) rotate(-6deg); } 80% { transform: none; } }
+.tool-legend button { padding: 7px 14px; border-radius: 999px; border: 1.5px solid color-mix(in srgb, var(--cc) 55%, var(--line)); color: var(--ink); background: var(--card); transition: background .2s, border-color .2s; }
+.tool-legend button:hover, .tool-legend button[aria-pressed="true"] { background: color-mix(in srgb, var(--cc) 14%, var(--card)); border-color: var(--cc); }
+
+/* Dark mode suggestion */
+.dark-tip { position: fixed; z-index: 60; right: 24px; top: calc(var(--nav-h) + 14px); display: flex; align-items: center; gap: 12px; padding: 12px 12px 12px 18px; border-radius: 999px; background: var(--ink); color: var(--bg); font-size: 14px; box-shadow: 0 18px 40px -16px rgba(0,0,0,.5); opacity: 0; transform: translateY(-8px); transition: opacity .35s var(--ease), transform .35s var(--ease); }
+.dark-tip.show { opacity: 1; transform: none; }
+.dark-tip::before { content: ""; position: absolute; top: -6px; right: var(--arrow, 30px); width: 12px; height: 12px; background: var(--ink); transform: rotate(45deg); border-radius: 2px; }
+.dt-try { border: 0; border-radius: 999px; padding: 7px 14px; background: var(--bg); color: var(--ink); font: 600 13px var(--sans); cursor: pointer; }
+.dt-x { border: 0; background: none; color: var(--bg); font-size: 20px; line-height: 1; cursor: pointer; opacity: .7; padding: 0 6px; }
+.theme.pulse { animation: pulse 1.6s ease-out infinite; }
+@keyframes pulse { 0% { box-shadow: 0 0 0 0 color-mix(in srgb, var(--accent) 55%, transparent); } 100% { box-shadow: 0 0 0 14px transparent; } }
+@media (max-width: 640px) { .dark-tip { left: 16px; right: 16px; border-radius: 18px; } .dark-tip::before { right: 22px; } }
+@media (prefers-reduced-motion: reduce) { .rain, .tl-hint svg, .theme.pulse { animation: none; } }
