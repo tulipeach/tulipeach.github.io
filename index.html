@@ -26,7 +26,7 @@
             <div class="menu" id="work-menu">
               <a href="kidvisor/index.html"><i style="--c:#2BA8E0"></i><span><b>Kidvisor</b><small>UX research and design</small></span></a>
               <a href="maps/index.html"><i style="--c:#B8321F"></i><span><b>MAPS Community Services</b><small>Data and operations</small></span></a>
-              <a href="#work" class="soon"><i style="--c:#4B2E83"></i><span><b>GSU Course Registration</b><small>Product management · soon</small></span></a>
+              <a href="#work" class="soon"><i style="--c:#5E9B6B"></i><span><b>GSU Course Registration</b><small>Product management · soon</small></span></a>
               <a href="#work" class="soon"><i style="--c:#E7A3B1"></i><span><b>Reham's Cake Gallery</b><small>Web development · soon</small></span></a>
               <hr>
               <a href="#research"><i class="ring"></i><span><b>Research</b><small>Questions I'm chasing</small></span></a>
@@ -46,6 +46,7 @@
         </ul>
       </nav>
     </div>
+    <div class="progress" id="progress" aria-hidden="true"></div>
   </header>
 
   <main id="top">
@@ -55,7 +56,7 @@
       <div class="wrap hero-grid">
         <div class="hero-text">
           <p class="kicker"><span class="dot"></span>Open to summer 2027 UX and product internships</p>
-          <h1>Hi, I'm Adiba.<br><span class="soft">I design things that <em>help</em> people.</span></h1>
+          <h1>Hi, I'm Adiba.<br><span class="soft">I design things that <span class="scribble"><em>help</em><svg viewBox="0 0 120 16" preserveAspectRatio="none" aria-hidden="true"><path d="M3 11 C 22 5, 44 4, 62 7 S 100 12, 117 5"/></svg></span> people.</span></h1>
           <p class="lede">Informatics student at the University of Washington. I turn messy human problems into clear, thoughtful tools.</p>
           <div class="hero-actions">
             <a class="btn" href="#work">See my work</a>
@@ -109,7 +110,7 @@
 
         <div class="deck">
           <!-- Kidvisor -->
-          <article class="pcase" style="--c:#1E93CB;--c2:#6BD0F8;--ink:#fff;--sub:rgba(255,255,255,.82)">
+          <article class="pcase light" style="--c:#C9E6F7;--c2:#EAF6FD;--ink:#0E3550;--sub:rgba(14,53,80,.76)">
             <a class="pcase-link" href="kidvisor/index.html" aria-label="Read the Kidvisor case study"></a>
             <div class="pcase-text">
               <span class="pnum">01 · UX research and design · 2026</span>
@@ -126,7 +127,7 @@
           </article>
 
           <!-- MAPS -->
-          <article class="pcase" style="--c:#A82C1B;--c2:#D9573B;--ink:#fff;--sub:rgba(255,255,255,.82)">
+          <article class="pcase light" style="--c:#F5D2C8;--c2:#FCEDE8;--ink:#5A1C12;--sub:rgba(90,28,18,.76)">
             <a class="pcase-link" href="maps/index.html" aria-label="Read the MAPS Community Services case study"></a>
             <div class="pcase-text">
               <span class="pnum">02 · Data and operations internship · 2026</span>
@@ -143,7 +144,7 @@
           </article>
 
           <!-- GSU -->
-          <article class="pcase" style="--c:#3B2470;--c2:#6B4BB8;--ink:#fff;--sub:rgba(255,255,255,.8)">
+          <article class="pcase light gsu" style="--c:#CFE6D4;--c2:#ECF6EE;--ink:#1D3D27;--sub:rgba(29,61,39,.76)">
             <div class="pcase-text">
               <span class="pnum">03 · Product management · 2026</span>
               <h3>GSU Course Registration</h3>
@@ -161,7 +162,7 @@
           </article>
 
           <!-- Reham's -->
-          <article class="pcase light" style="--c:#F3C9D1;--c2:#FBE6EA;--ink:#3A1520;--sub:rgba(58,21,32,.75)">
+          <article class="pcase light" style="--c:#F6D0D8;--c2:#FCEDF0;--ink:#3A1520;--sub:rgba(58,21,32,.76)">
             <div class="pcase-text">
               <span class="pnum">04 · Web development · In progress</span>
               <h3>Reham's Cake Gallery</h3>
@@ -203,6 +204,7 @@
           <h3>How do researchers study parents, children and AI learning together?</h3>
           <p>With a UW research team, I'm reviewing five years of studies on parent, child and AI interaction in education, and how each study frames the parent's role.</p>
           <span class="rmeta">With Dr. Johnny Cho's team · 2026</span>
+          <button class="rmore" type="button" data-m="m-review">Learn more <span aria-hidden="true">+</span></button>
           <!-- Swap for an image: <div class="rimg"><img src="images/research-review.jpg" alt=""></div> -->
           <div class="rimg" aria-hidden="true"></div>
         </article>
@@ -211,6 +213,7 @@
           <h3>What do parents actually worry about when it comes to AI content?</h3>
           <p>Four parent interviews and a survey showed that parents can't always tell what's AI-made, and want to understand, not just block.</p>
           <span class="rmeta">Kidvisor · INFO 360 · 2026</span>
+          <button class="rmore" type="button" data-m="m-kidvisor">Learn more <span aria-hidden="true">+</span></button>
           <div class="rimg" aria-hidden="true"><img src="kidvisor/images/journey-map.webp" alt="" loading="lazy"></div>
         </article>
         <article class="rcard" style="--r:#4F6B3A">
@@ -218,6 +221,7 @@
           <h3>Who does the world trust to regulate AI?</h3>
           <p>Using Pew's 2025 Global Attitudes survey, I compared trust in the US, China, the EU and people's own countries, and how age relates to feelings about AI.</p>
           <span class="rmeta">SOC 225 · 23 countries · 2026</span>
+          <button class="rmore" type="button" data-m="m-pew">Learn more <span aria-hidden="true">+</span></button>
           <!-- Swap for an image: <div class="rimg"><img src="images/research-pew.jpg" alt=""></div> -->
           <div class="rimg" aria-hidden="true"></div>
         </article>
@@ -227,6 +231,41 @@
           <p>Writing and findings will live here as the review moves toward publication.</p>
         </article>
       </div>
+      <!-- Research pop-ups -->
+      <dialog class="rmodal" id="rmodal" aria-labelledby="rm-title">
+        <div class="rm-box">
+          <button class="rm-close" type="button" aria-label="Close">×</button>
+          <div class="rm-body" id="rm-body"></div>
+        </div>
+      </dialog>
+      <template id="m-review">
+        <span class="rtag" style="--r:#7B1F33">Systematic review · In progress</span>
+        <h3 id="rm-title">How do researchers study parents, children and AI learning together?</h3>
+        <dl>
+          <dt>What I'm doing</dt><dd>With Dr. Johnny Cho's team at UW, I helped search databases like ACM Digital Library, ScienceDirect and PsycINFO, screen about 300 articles down to a final set of 33, and co-write the Methods section.</dd>
+          <dt>What we're looking at</dt><dd>The methods and age groups studies use, how they frame the roles of parents and children with AI, and what they say about learning outcomes and gaps.</dd>
+          <dt>Status</dt><dd>Writing in progress. Findings will be shared here as the paper moves forward.</dd>
+        </dl>
+      </template>
+      <template id="m-kidvisor">
+        <span class="rtag" style="--r:#1E93CB">UX research</span>
+        <h3 id="rm-title">What do parents actually worry about when it comes to AI content?</h3>
+        <dl>
+          <dt>What I did</dt><dd>Four parent interviews and a survey, then an empathy map, personas and a journey map, followed by two rounds of usability testing.</dd>
+          <dt>What I found</dt><dd>Parents can't always tell what's AI-made. They want to understand it and talk about it with their kids, not just block it, and they need support that's low-effort.</dd>
+          <dt>Where it led</dt><dd>Kidvisor's alerts that explain instead of only blocking, and Co-Learn lessons for parents and kids to do together.</dd>
+        </dl>
+        <a class="rm-link" href="kidvisor/index.html">Read the full case study →</a>
+      </template>
+      <template id="m-pew">
+        <span class="rtag" style="--r:#4F6B3A">Data analysis in R</span>
+        <h3 id="rm-title">Who does the world trust to regulate AI?</h3>
+        <dl>
+          <dt>The data</dt><dd>Pew Research Center's Spring 2025 Global Attitudes Survey, covering 25 countries, with 23 in my final analysis.</dd>
+          <dt>What I did</dt><dd>Cleaned and reshaped the data in R, compared trust in the US, China, the EU and people's own countries, and tested how age relates to feelings about AI with ANOVA and regression.</dd>
+          <dt>What I found</dt><dd>Trust in who should regulate AI varies a lot by country. Older people were more likely to feel more concerned than excited about AI, while younger people leaned more excited.</dd>
+        </dl>
+      </template>
     </section>
 
     <!-- ============ PLAYGROUND ============ -->
@@ -257,19 +296,12 @@
     <!-- ============ ABOUT ============ -->
     <section class="about" id="about">
       <div class="wrap">
-        <div class="about-head">
-          <span class="label">About me</span>
-          <h2 class="about-hook">I turn messy problems into simple, <em>human-centered</em> solutions using data, design and product thinking.</h2>
-          <p class="about-sub">Work that makes a real difference for people is what drives me.</p>
-        </div>
-
-        <div class="about-grid">
-          <!-- To add your photo, upload a vertical photo as images/me/about.jpg -->
-          <figure class="about-photo-wrap">
-            <div class="about-photo"><span>Your photo</span><img src="images/me/about.jpg" alt="Adiba Saadullah" onerror="this.remove()"></div>
-          </figure>
-
-          <div class="about-text">
+        <div class="about-top">
+          <div class="about-main">
+            <span class="label">About me</span>
+            <h2 class="about-hook">I turn messy problems into simple, <em>human-centered</em> solutions using data, design and product thinking.</h2>
+            <p class="about-sub">Work that makes a real difference for people is what drives me.</p>
+            <svg class="untangle" id="untangle" viewBox="0 0 600 70" preserveAspectRatio="none" aria-hidden="true"><path id="untangle-path"/><circle id="untangle-dot" r="5"/></svg>
             <ol class="bring">
               <li><span class="bn">01</span><p>I make complicated things simple and beautiful, whether it's a classroom lesson for young kids or a handoff guide for a nonprofit team to use.</p></li>
               <li><span class="bn">02</span><p>I can take an idea from research to real: talking to users, finding the patterns, and designing and testing until it works.</p></li>
@@ -277,7 +309,13 @@
             </ol>
             <p class="about-outside">Outside of design, find me enjoying fall pastries, making mood boards and brainstorming my next project.</p>
           </div>
+          <!-- To add your photo, upload a vertical photo as images/me/about.jpg -->
+          <figure class="about-photo-wrap">
+            <div class="about-photo"><span>Your photo</span><img src="images/me/about.jpg" alt="Adiba Saadullah" onerror="this.remove()"></div>
+          </figure>
+        </div>
 
+        <div class="about-cv">
           <div class="exp">
             <h3>Experience</h3>
             <ol>
@@ -287,6 +325,8 @@
               <li><span class="when">Now</span><span class="what"><b>PR, MSA Volunteer Corps</b>Muslim Student Association, UW</span></li>
               <li><span class="when">Before UW</span><span class="what"><b>Marketing Manager, Interim President</b>Students for Justice, Bellevue College</span></li>
             </ol>
+          </div>
+          <div class="exp">
             <h3>Education</h3>
             <ol>
               <li><span class="when">2028</span><span class="what"><b>B.S. Informatics</b>University of Washington</span></li>
@@ -297,20 +337,27 @@
 
         <div class="skills">
           <h3>Tools I use</h3>
-          <div class="tool-groups">
-            <div class="tg tg-design"><h4>Design</h4><ul class="tool-grid">
-              <li><i><img src="images/tools/figma.png" alt=""></i>Figma / FigJam</li><li><i><img src="images/tools/canva.png" alt=""></i>Canva</li><li><i><img src="images/tools/illustrator.png" alt=""></i>Illustrator</li><li><i><img src="images/tools/photoshop.png" alt=""></i>Photoshop</li><li><i><img src="images/tools/indesign.png" alt=""></i>InDesign</li>
-            </ul></div>
-            <div class="tg"><h4>Product and teamwork</h4><ul class="tool-grid">
-              <li><i><img src="images/tools/jira.png" alt=""></i>Jira</li><li><i><img src="images/tools/notion.png" alt=""></i>Notion</li><li><i><img src="images/tools/miro.png" alt=""></i>Miro</li>
-            </ul></div>
-            <div class="tg"><h4>Data</h4><ul class="tool-grid">
-              <li><i><img src="images/tools/r.png" alt=""></i>R</li><li><i><img src="images/tools/sql.png" alt=""></i>SQL</li><li><i><img src="images/tools/excel.png" alt=""></i>Excel</li>
-            </ul></div>
-            <div class="tg"><h4>Code</h4><ul class="tool-grid">
-              <li><i><img src="images/tools/html.png" alt=""></i>HTML</li><li><i><img src="images/tools/css.png" alt=""></i>CSS</li><li><i><img src="images/tools/javascript.png" alt=""></i>JavaScript</li><li><i><img src="images/tools/vscode.png" alt=""></i>VS Code</li><li><i><img src="images/tools/git.png" alt=""></i>Git / GitHub</li>
-            </ul></div>
+          <div class="tool-legend" id="tool-legend">
+            <button type="button" data-c="design"><i></i>Design</button><button type="button" data-c="product"><i></i>Product and teamwork</button><button type="button" data-c="data"><i></i>Data</button><button type="button" data-c="code"><i></i>Code</button>
           </div>
+          <ul class="tools-all" id="tools-all">
+              <li data-c="design"><img src="images/tools/figma.png" alt=""><b>Figma / FigJam</b><small>Design</small></li>
+              <li data-c="design"><img src="images/tools/canva.png" alt=""><b>Canva</b><small>Design</small></li>
+              <li data-c="design"><img src="images/tools/illustrator.png" alt=""><b>Illustrator</b><small>Design</small></li>
+              <li data-c="design"><img src="images/tools/photoshop.png" alt=""><b>Photoshop</b><small>Design</small></li>
+              <li data-c="design"><img src="images/tools/indesign.png" alt=""><b>InDesign</b><small>Design</small></li>
+              <li data-c="product"><img src="images/tools/jira.png" alt=""><b>Jira</b><small>Product</small></li>
+              <li data-c="product"><img src="images/tools/notion.png" alt=""><b>Notion</b><small>Product</small></li>
+              <li data-c="product"><img src="images/tools/miro.png" alt=""><b>Miro</b><small>Product</small></li>
+              <li data-c="data"><img src="images/tools/r.png" alt=""><b>R</b><small>Data</small></li>
+              <li data-c="data"><img src="images/tools/sql.png" alt=""><b>SQL</b><small>Data</small></li>
+              <li data-c="data"><img src="images/tools/excel.png" alt=""><b>Excel</b><small>Data</small></li>
+              <li data-c="code"><img src="images/tools/html.png" alt=""><b>HTML</b><small>Code</small></li>
+              <li data-c="code"><img src="images/tools/css.png" alt=""><b>CSS</b><small>Code</small></li>
+              <li data-c="code"><img src="images/tools/javascript.png" alt=""><b>JavaScript</b><small>Code</small></li>
+              <li data-c="code"><img src="images/tools/vscode.png" alt=""><b>VS Code</b><small>Code</small></li>
+              <li data-c="code"><img src="images/tools/git.png" alt=""><b>Git / GitHub</b><small>Code</small></li>
+          </ul>
           <p class="methods"><b>AI tools</b> Claude, ChatGPT and Gemini for research and productivity</p>
         </div>
       </div>
@@ -333,7 +380,7 @@
       </div>
       <div class="foot">
         <span>© <span id="year">2026</span> Adiba Saadullah</span>
-        <span>Designed and built on rainy Seattle days</span>
+        <span>Designed and coded by me on rainy days, with Claude Opus</span>
       </div>
     </div>
   </footer>
@@ -385,26 +432,13 @@
     function flip() {
       if (busy) return; busy = true;
       var top = cards[idx];
-      top.classList.add('out');
-      setTimeout(function () {
-        // Move the card to the back while it's invisible, then fade it in there
-        top.style.transition = 'none';
-        top.classList.remove('out');
-        idx = (idx + 1) % cards.length;
-        layout();
-        top.style.opacity = '0';
-        void top.offsetWidth;
-        top.style.transition = '';
-        top.style.opacity = '';
-        setTimeout(function () { busy = false; }, 200);
-      }, 420);
+      idx = (idx + 1) % cards.length;
+      layout();                       // the other cards move forward
+      top.style.zIndex = cards.length + 1;
+      top.classList.add('shuffle');   // the top card slides out, then tucks in at the back
+      setTimeout(function () { top.style.zIndex = 0; }, 340);
+      setTimeout(function () { top.classList.remove('shuffle'); layout(); busy = false; }, 760);
     }
-    // One gentle nudge on load so the cards look flippable
-    setTimeout(function () {
-      if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-      var t = cards[idx]; t.classList.add('nudge');
-      setTimeout(function () { t.classList.remove('nudge'); }, 1100);
-    }, 1400);
     stack.addEventListener('click', flip);
     stack.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); flip(); } });
     layout();
@@ -441,6 +475,7 @@
       li.tabIndex = 0;
       li.addEventListener('mouseenter', function () { show(li.dataset.k); });
       li.addEventListener('focus', function () { show(li.dataset.k); });
+      li.addEventListener('click', function () { show(li.dataset.k); });
     });
     show('posters');
     document.querySelectorAll('.pc-link').forEach(function (a) {
@@ -456,9 +491,94 @@
     });
     document.getElementById('year').textContent = new Date().getFullYear();
 
+
+    // Research pop-ups
+    var dlg = document.getElementById('rmodal'), body = document.getElementById('rm-body');
+    document.querySelectorAll('.rmore').forEach(function (b) {
+      b.addEventListener('click', function () {
+        body.innerHTML = document.getElementById(b.dataset.m).innerHTML;
+        if (dlg.showModal) dlg.showModal(); else dlg.setAttribute('open', '');
+      });
+    });
+    function closeDlg() { dlg.classList.add('closing'); setTimeout(function () { dlg.classList.remove('closing'); dlg.close ? dlg.close() : dlg.removeAttribute('open'); }, 200); }
+    dlg.querySelector('.rm-close').addEventListener('click', closeDlg);
+    dlg.addEventListener('click', function (e) { if (e.target === dlg) closeDlg(); });
+    dlg.addEventListener('cancel', function (e) { e.preventDefault(); closeDlg(); });
+
+    // Tools legend: highlight one category
+    var tAll = document.getElementById('tools-all');
+    document.querySelectorAll('#tool-legend button').forEach(function (b) {
+      var on = function () { tAll.dataset.hl = b.dataset.c; }, off = function () { delete tAll.dataset.hl; };
+      b.addEventListener('mouseenter', on); b.addEventListener('focus', on);
+      b.addEventListener('mouseleave', off); b.addEventListener('blur', off);
+    });
+
+    var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    // Scroll progress line
+    var bar = document.getElementById('progress');
+    function prog() { var h = document.documentElement.scrollHeight - innerHeight; bar.style.transform = 'scaleX(' + (h > 0 ? scrollY / h : 0) + ')'; }
+    addEventListener('scroll', prog, { passive: true }); prog();
+
+    // Messy to simple: a tangled line that straightens as you scroll
+    var un = document.getElementById('untangle'), unPath = document.getElementById('untangle-path'), unDot = document.getElementById('untangle-dot');
+    function drawLine(p) {
+      var W = 600, H = 70, N = 520, d = '', A = 24 * (1 - p);
+      for (var i = 0; i <= N; i++) {
+        var t = i / N, k = t * Math.PI * 2 * 17;
+        var amp = A * (0.5 + 0.5 * Math.abs(Math.sin(t * 5.1 + 0.6))) * Math.min(1, (1 - t) / .06, t / .03 + .2);
+        var x = 6 + t * (W - 18) - amp * (Math.sin(k) * 0.85 + 0.35 * Math.sin(k * 0.43 + 2));
+        var y = H / 2 + amp * (Math.cos(k) * 0.75 + 0.3 * Math.sin(k * 1.63 + 1));
+        d += (i ? ' L' : 'M') + x.toFixed(1) + ' ' + y.toFixed(1);
+      }
+      unPath.setAttribute('d', d);
+      unDot.setAttribute('cx', W - 10); unDot.setAttribute('cy', H / 2);
+      un.style.setProperty('--u', p.toFixed(3));
+    }
+    function untangle() {
+      var r = un.getBoundingClientRect();
+      var p = reduce ? 1 : Math.min(Math.max((innerHeight * 0.92 - r.top) / (innerHeight * 0.55), 0), 1);
+      drawLine(p * p * (3 - 2 * p));
+    }
+    addEventListener('scroll', untangle, { passive: true }); addEventListener('resize', untangle); untangle();
+
+    // Headline reveals: words rise into place
+    var heads = document.querySelectorAll('.sec-head h2, .about-hook');
+    heads.forEach(function (h) {
+      var out = [], i = 0;
+      Array.prototype.slice.call(h.childNodes).forEach(function (n) {
+        var isEm = n.nodeType === 1, words = n.textContent.split(/\s+/).filter(Boolean);
+        if (n.nodeType === 1 && n.tagName === 'BR') { out.push('<br>'); return; }
+        words.forEach(function (w) {
+          out.push('<span class="w"><span style="--i:' + (i++) + '">' + (isEm ? '<em>' + w + '</em>' : w) + '</span></span>');
+        });
+      });
+      h.innerHTML = out.join(' ');
+      h.classList.add('split');
+    });
+    if ('IntersectionObserver' in window && !reduce) {
+      var ho = new IntersectionObserver(function (es) {
+        es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('up'); ho.unobserve(e.target); } });
+      }, { rootMargin: '0px 0px -10% 0px' });
+      heads.forEach(function (h) { ho.observe(h); });
+    } else { heads.forEach(function (h) { h.classList.add('up'); }); }
+
+    // Magnetic buttons
+    if (matchMedia('(pointer: fine)').matches && !reduce) {
+      document.querySelectorAll('.hero-actions .btn, .nav .btn').forEach(function (btn) {
+        btn.classList.add('magnet');
+        btn.addEventListener('mousemove', function (e) {
+          var r = btn.getBoundingClientRect();
+          var x = e.clientX - (r.left + r.width / 2), y = e.clientY - (r.top + r.height / 2);
+          btn.style.transform = 'translate(' + x * 0.28 + 'px,' + y * 0.38 + 'px)';
+        });
+        btn.addEventListener('mouseleave', function () { btn.style.transform = ''; });
+      });
+    }
+
     // Reveal on scroll
     if ('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
-      var els = document.querySelectorAll('.sec-head, .rcard, .play-list li, .about-text, .exp, .skills');
+      var els = document.querySelectorAll('.rcard, .play-list li, .bring li, .about-outside, .about-photo-wrap, .about-cv .exp, .skills');
       els.forEach(function (el) { el.classList.add('reveal'); });
       var io = new IntersectionObserver(function (es) {
         es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
